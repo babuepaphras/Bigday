@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at Mar 21, 2016 12:26:21 PM                    ---
+ * --- Generated at Mar 21, 2016 5:15:45 PM                     ---
  * ----------------------------------------------------------------
  *  
  * [y] hybris Platform
@@ -22,6 +22,7 @@ import de.hybris.bigday.core.jalo.ApparelProduct;
 import de.hybris.bigday.core.jalo.ApparelSizeVariantProduct;
 import de.hybris.bigday.core.jalo.ApparelStyleVariantProduct;
 import de.hybris.bigday.core.jalo.ElectronicsColorVariantProduct;
+import de.hybris.bigday.core.jalo.Postadd;
 import de.hybris.platform.jalo.Item;
 import de.hybris.platform.jalo.Item.AttributeMode;
 import de.hybris.platform.jalo.JaloBusinessException;
@@ -166,6 +167,32 @@ public abstract class GeneratedBigdayCoreManager extends Extension
 	public ElectronicsColorVariantProduct createElectronicsColorVariantProduct(final Map attributeValues)
 	{
 		return createElectronicsColorVariantProduct( getSession().getSessionContext(), attributeValues );
+	}
+	
+	public Postadd createPostadd(final SessionContext ctx, final Map attributeValues)
+	{
+		try
+		{
+			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType( BigdayCoreConstants.TC.POSTADD );
+			return (Postadd)type.newInstance( ctx, attributeValues );
+		}
+		catch( JaloGenericCreationException e)
+		{
+			final Throwable cause = e.getCause();
+			throw (cause instanceof RuntimeException ?
+			(RuntimeException)cause
+			:
+			new JaloSystemException( cause, cause.getMessage(), e.getErrorCode() ) );
+		}
+		catch( JaloBusinessException e )
+		{
+			throw new JaloSystemException( e ,"error creating postadd : "+e.getMessage(), 0 );
+		}
+	}
+	
+	public Postadd createPostadd(final Map attributeValues)
+	{
+		return createPostadd( getSession().getSessionContext(), attributeValues );
 	}
 	
 	/**

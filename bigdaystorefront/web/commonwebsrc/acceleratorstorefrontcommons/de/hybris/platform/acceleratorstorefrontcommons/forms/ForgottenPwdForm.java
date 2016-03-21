@@ -9,7 +9,7 @@
  * Information and shall use it only in accordance with the terms of the
  * license agreement you entered into with hybris.
  *
- *  
+ *
  */
 package de.hybris.platform.acceleratorstorefrontcommons.forms;
 
@@ -25,6 +25,7 @@ import org.hibernate.validator.constraints.Email;
 public class ForgottenPwdForm
 {
 	private String email;
+
 
 	/**
 	 * @return the email

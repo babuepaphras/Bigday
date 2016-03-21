@@ -40,6 +40,33 @@
 	<itemtypes>
 
 		<!-- Add your item definitions here -->
+<itemtype code="postadd" extends="GenericItem" autocreate="true" generate="true">
+		<deployment table="postadd" typecode="1234"/>
+		<attributes>
+		<attribute type="java.lang.String" qualifier="title" autocreate="true" generate="true">
+		<persistence type="property" qualifier="Title"></persistence>
+		<modifiers read="true" write="true" unique="false"/>
+		</attribute>
+		<attribute type="java.lang.String" qualifier="category" autocreate="true" generate="true">
+		<persistence type="property" qualifier="Category"></persistence>
+		<modifiers read="true" write="true" unique="false"/>
+		</attribute>
+		<attribute type="java.lang.String" qualifier="description" autocreate="true" generate="true">
+		<persistence type="property" qualifier="Description"></persistence>
+		<modifiers read="true" write="true" unique="false"/>
+		</attribute>
+		<attribute type="java.lang.String" qualifier="valid" autocreate="true" generate="true">
+		<persistence type="property" qualifier="Valid"></persistence>
+		<modifiers read="true" write="true" unique="false"/>
+		</attribute>
+		<attribute type="java.lang.Integer" qualifier="phno" autocreate="true"      generate="true">
+		<persistence type="property" qualifier="Phno"></persistence>
+		<modifiers read="true" write="true" unique="false"/>
+		</attribute>
+		</attributes></itemtype>
+
+
+
 
 <itemtype code="User" autocreate="false" generate="false">
 			<attributes>

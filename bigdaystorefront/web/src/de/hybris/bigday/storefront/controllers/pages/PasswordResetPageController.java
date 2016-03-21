@@ -9,21 +9,22 @@
  * Information and shall use it only in accordance with the terms of the
  * license agreement you entered into with hybris.
  *
- *  
+ *
  */
 package de.hybris.bigday.storefront.controllers.pages;
 
+import de.hybris.bigday.storefront.controllers.ControllerConstants;
 import de.hybris.platform.acceleratorstorefrontcommons.breadcrumb.ResourceBreadcrumbBuilder;
 import de.hybris.platform.acceleratorstorefrontcommons.constants.WebConstants;
 import de.hybris.platform.acceleratorstorefrontcommons.controllers.pages.AbstractPageController;
+import de.hybris.platform.acceleratorstorefrontcommons.controllers.util.GlobalMessages;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.ForgottenPwdForm;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.UpdatePwdForm;
+import de.hybris.platform.acceleratorstorefrontcommons.forms.validation.ForgotPasswordValidator;
 import de.hybris.platform.cms2.exceptions.CMSItemNotFoundException;
 import de.hybris.platform.commercefacades.customer.CustomerFacade;
 import de.hybris.platform.commerceservices.customer.TokenInvalidatedException;
 import de.hybris.platform.servicelayer.exceptions.UnknownIdentifierException;
-import de.hybris.bigday.storefront.controllers.ControllerConstants;
-import de.hybris.platform.acceleratorstorefrontcommons.controllers.util.GlobalMessages;
 
 import javax.annotation.Resource;
 import javax.validation.Valid;
@@ -63,6 +64,18 @@ public class PasswordResetPageController extends AbstractPageController
 	@Resource(name = "simpleBreadcrumbBuilder")
 	private ResourceBreadcrumbBuilder resourceBreadcrumbBuilder;
 
+	@Resource(name = "forgotPasswordValidator")
+	private ForgotPasswordValidator forgotPasswordValidator;
+
+
+	protected ForgotPasswordValidator getForgotPasswordValidator()
+	{
+		return forgotPasswordValidator;
+	}
+
+
+
+
 	@RequestMapping(value = "/request", method = RequestMethod.GET)
 	public String getPasswordRequest(final Model model) throws CMSItemNotFoundException
 	{
@@ -74,6 +87,7 @@ public class PasswordResetPageController extends AbstractPageController
 	public String passwordRequest(@Valid final ForgottenPwdForm form, final BindingResult bindingResult, final Model model)
 			throws CMSItemNotFoundException
 	{
+		int id = 0;
 		if (bindingResult.hasErrors())
 		{
 			return ControllerConstants.Views.Fragments.Password.PasswordResetRequestPopup;
@@ -82,14 +96,32 @@ public class PasswordResetPageController extends AbstractPageController
 		{
 			try
 			{
+				getForgotPasswordValidator().validate(form, bindingResult);
+
+
 				customerFacade.forgottenPassword(form.getEmail());
+
+
 			}
 			catch (final UnknownIdentifierException unknownIdentifierException)
 			{
+				id = id + 1;
+
 				LOG.warn("Email: " + form.getEmail() + " does not exist in the database.");
 			}
-			return ControllerConstants.Views.Fragments.Password.ForgotPasswordValidationMessage;
+			if (id == 0)
+			{
+				System.out.println("succes : " + id);
+				return ControllerConstants.Views.Fragments.Password.ForgotPasswordValidationMessage;
+			}
+			else
+			{
+
+				System.out.println("failure : " + id);
+				return ControllerConstants.Views.Fragments.Password.ForgotPasswordInValidMessage;
+			}
 		}
+
 	}
 
 	@RequestMapping(value = "/request/external", method = RequestMethod.GET)
@@ -112,8 +144,8 @@ public class PasswordResetPageController extends AbstractPageController
 	}
 
 	@RequestMapping(value = "/request/external", method = RequestMethod.POST)
-	public String externalPasswordRequest(@Valid final ForgottenPwdForm form, final BindingResult bindingResult, final Model model, final RedirectAttributes redirectModel)
-			throws CMSItemNotFoundException
+	public String externalPasswordRequest(@Valid final ForgottenPwdForm form, final BindingResult bindingResult, final Model model,
+			final RedirectAttributes redirectModel) throws CMSItemNotFoundException
 	{
 		storeCmsPageInModel(model, getContentPageForLabelOrId(null));
 		setUpMetaDataForContentPage(model, getContentPageForLabelOrId(null));
@@ -129,7 +161,7 @@ public class PasswordResetPageController extends AbstractPageController
 			{
 				customerFacade.forgottenPassword(form.getEmail());
 				GlobalMessages.addFlashMessage(redirectModel, GlobalMessages.CONF_MESSAGES_HOLDER,
-										"account.confirmation.forgotten.password.link.sent");
+						"account.confirmation.forgotten.password.link.sent");
 			}
 			catch (final UnknownIdentifierException unknownIdentifierException)
 			{
@@ -187,7 +219,7 @@ public class PasswordResetPageController extends AbstractPageController
 
 	/**
 	 * Prepares the view to display an error message
-	 * 
+	 *
 	 * @throws CMSItemNotFoundException
 	 */
 	protected void prepareErrorMessage(final Model model, final String page) throws CMSItemNotFoundException

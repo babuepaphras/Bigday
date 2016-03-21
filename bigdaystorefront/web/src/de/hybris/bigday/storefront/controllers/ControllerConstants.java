@@ -168,6 +168,9 @@ public interface ControllerConstants
 				String loginResetRequestPopup = "fragments/password/loginResetRequestPopup";
 				String PasswordResetRequestPopup = "fragments/password/passwordResetRequestPopup";
 				String ForgotPasswordValidationMessage = "fragments/password/forgotPasswordValidationMessage";
+				//gopi
+				String ForgotPasswordInValidMessage = "fragments/password/forgotPasswordInValidMessage";
+				//gopi
 			}
 
 			interface Product

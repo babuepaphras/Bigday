@@ -68,6 +68,7 @@
 			<cms:pageSlot position="MiniCart" var="cart" limit="1">
 				<cms:component component="${cart}" element="li" class="miniCart" />
 			</cms:pageSlot>
+			
 		</ul>
 	</div>
 

@@ -55,7 +55,7 @@ public class RegistrationValidator implements Validator
 		{
 			errors.rejectValue("mobileNumber", "register.mobileNumber.invalid");
 		}
-		else if (StringUtils.length(mobileNumber) > 10)
+		else if (StringUtils.length(mobileNumber) < 10)
 		{
 			errors.rejectValue("mobileNumber", "register.mobileNumber.invalid");
 		}
@@ -64,7 +64,7 @@ public class RegistrationValidator implements Validator
 		{
 			errors.rejectValue("gender", "register.gender.invalid");
 		}
-		
+
 
 		if (StringUtils.isEmpty(titleCode))
 		{
