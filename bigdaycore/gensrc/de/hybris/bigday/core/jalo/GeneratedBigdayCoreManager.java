@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at Mar 21, 2016 5:15:45 PM                     ---
+ * --- Generated at Mar 28, 2016 4:56:55 PM                     ---
  * ----------------------------------------------------------------
  *  
  * [y] hybris Platform
@@ -22,7 +22,9 @@ import de.hybris.bigday.core.jalo.ApparelProduct;
 import de.hybris.bigday.core.jalo.ApparelSizeVariantProduct;
 import de.hybris.bigday.core.jalo.ApparelStyleVariantProduct;
 import de.hybris.bigday.core.jalo.ElectronicsColorVariantProduct;
+import de.hybris.bigday.core.jalo.GetACall;
 import de.hybris.bigday.core.jalo.Postadd;
+import de.hybris.bigday.core.jalo.Store;
 import de.hybris.platform.jalo.Item;
 import de.hybris.platform.jalo.Item.AttributeMode;
 import de.hybris.platform.jalo.JaloBusinessException;
@@ -169,6 +171,32 @@ public abstract class GeneratedBigdayCoreManager extends Extension
 		return createElectronicsColorVariantProduct( getSession().getSessionContext(), attributeValues );
 	}
 	
+	public GetACall createGetACall(final SessionContext ctx, final Map attributeValues)
+	{
+		try
+		{
+			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType( BigdayCoreConstants.TC.GETACALL );
+			return (GetACall)type.newInstance( ctx, attributeValues );
+		}
+		catch( JaloGenericCreationException e)
+		{
+			final Throwable cause = e.getCause();
+			throw (cause instanceof RuntimeException ?
+			(RuntimeException)cause
+			:
+			new JaloSystemException( cause, cause.getMessage(), e.getErrorCode() ) );
+		}
+		catch( JaloBusinessException e )
+		{
+			throw new JaloSystemException( e ,"error creating GetACall : "+e.getMessage(), 0 );
+		}
+	}
+	
+	public GetACall createGetACall(final Map attributeValues)
+	{
+		return createGetACall( getSession().getSessionContext(), attributeValues );
+	}
+	
 	public Postadd createPostadd(final SessionContext ctx, final Map attributeValues)
 	{
 		try
@@ -193,6 +221,32 @@ public abstract class GeneratedBigdayCoreManager extends Extension
 	public Postadd createPostadd(final Map attributeValues)
 	{
 		return createPostadd( getSession().getSessionContext(), attributeValues );
+	}
+	
+	public Store createStore(final SessionContext ctx, final Map attributeValues)
+	{
+		try
+		{
+			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType( BigdayCoreConstants.TC.STORE );
+			return (Store)type.newInstance( ctx, attributeValues );
+		}
+		catch( JaloGenericCreationException e)
+		{
+			final Throwable cause = e.getCause();
+			throw (cause instanceof RuntimeException ?
+			(RuntimeException)cause
+			:
+			new JaloSystemException( cause, cause.getMessage(), e.getErrorCode() ) );
+		}
+		catch( JaloBusinessException e )
+		{
+			throw new JaloSystemException( e ,"error creating Store : "+e.getMessage(), 0 );
+		}
+	}
+	
+	public Store createStore(final Map attributeValues)
+	{
+		return createStore( getSession().getSessionContext(), attributeValues );
 	}
 	
 	/**

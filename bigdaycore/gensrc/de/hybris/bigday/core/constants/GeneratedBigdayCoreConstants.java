@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at Mar 21, 2016 5:15:45 PM                     ---
+ * --- Generated at Mar 28, 2016 4:56:55 PM                     ---
  * ----------------------------------------------------------------
  *  
  * [y] hybris Platform
@@ -31,7 +31,9 @@ public class GeneratedBigdayCoreConstants
 		public static final String APPARELSIZEVARIANTPRODUCT = "ApparelSizeVariantProduct".intern();
 		public static final String APPARELSTYLEVARIANTPRODUCT = "ApparelStyleVariantProduct".intern();
 		public static final String ELECTRONICSCOLORVARIANTPRODUCT = "ElectronicsColorVariantProduct".intern();
+		public static final String GETACALL = "GetACall".intern();
 		public static final String POSTADD = "postadd".intern();
+		public static final String STORE = "Store".intern();
 		public static final String SWATCHCOLORENUM = "SwatchColorEnum".intern();
 	}
 	public static class Attributes

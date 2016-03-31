@@ -17,6 +17,17 @@
 		http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<!-- Facades -->
+	<alias alias="addPostFacade" name="addPostFacadeImpl"/>
+	<bean id="addPostFacadeImpl" class="de.hybris.bigday.facades.adds.impl.AddPostFacadeImpl">
+	<property name="postaddservice" ref="postaddservice" />
+	</bean>
+	
+		<alias alias="callFacade" name="defaultCallFacade"/>
+		<bean id="defaultCallFacade"    class="de.hybris.bigday.facades.calls.impl.DefaultCallFacade">
+	<property name="callService" ref="callService"/>
+	<property name="customerFacade" ref="customerFacade"/>
+	<property name="customerNameStrategy" ref="customerNameStrategy"/>
+		</bean>
 	<alias alias="simpleSuggestionFacade" name="defaultSimpleSuggestionFacade"/>
 	<bean id="defaultSimpleSuggestionFacade" class="de.hybris.bigday.facades.suggestion.impl.DefaultSimpleSuggestionFacade" >
 		<property name="simpleSuggestionService" ref="simpleSuggestionService"/>

@@ -20,4 +20,13 @@
 		<property name="code" type="String"/>
 		<property name="name" type="String"/>
 	</bean>
+	
+	<bean class="de.hybris.platform.commercefacades.user.data.PostAddData">
+		<property name="adtitle" type="String"/>
+		<property name="catgory" type="String"/>
+		<property name="description" type="String"/>
+		<property name="valid" type="String"/>
+		<property name="phno" type="Integer"/>
+	</bean>
+	
 </beans>

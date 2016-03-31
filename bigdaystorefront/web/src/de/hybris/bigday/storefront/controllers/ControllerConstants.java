@@ -92,6 +92,12 @@ public interface ControllerConstants
 				String AccountRegisterPage = "pages/account/accountRegisterPage";
 			}
 
+			interface Add
+			{
+				String PostAddPage = "pages/adds/postyouraddpage";
+			}
+
+
 			interface Checkout
 			{
 				String CheckoutRegisterPage = "pages/checkout/checkoutRegisterPage";

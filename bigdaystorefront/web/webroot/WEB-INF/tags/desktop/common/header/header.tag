@@ -54,8 +54,9 @@
 				<!-- ************************** -->
 				</sec:authorize>
 				<li><ycommerce:testId code="header_myAccount"><a href="<c:url value="/my-account"/>"><spring:theme code="header.link.account"/></a></ycommerce:testId></li>
+			
 			</c:if>
-
+<li><a href="<c:url value="/postadd"/>">POSTYOURADD</a></li>
 			<cms:pageSlot position="HeaderLinks" var="link">
 				<cms:component component="${link}" element="li"/>
 			</cms:pageSlot>
