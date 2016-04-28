@@ -1,4 +1,4 @@
-<%@ tag body-content="empty" trimDirectiveWhitespaces="true" %>
+<%-- <%@ tag body-content="empty" trimDirectiveWhitespaces="true" %>
 
 <%@ attribute name="languages" required="true" type="java.util.Collection" %>
 <%@ attribute name="currentLanguage" required="true" type="de.hybris.platform.commercefacades.storesession.data.LanguageData" %>
@@ -29,7 +29,7 @@
 						</c:when>
 						<c:otherwise>
 							<option value="${lang.isocode}" lang="${lang.isocode}">
-								${lang.nativeName} <%-- (${lang.name}) --%>
+								${lang.nativeName} (${lang.name})
 							</option>
 						</c:otherwise>
 					</c:choose>
@@ -39,4 +39,4 @@
 		</div>
 	</div>
 	</form:form>
-</c:if>
+</c:if> --%>
