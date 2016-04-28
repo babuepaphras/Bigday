@@ -18,18 +18,37 @@
 	<div class="backToMobileStore">
 		<a href="${clearUiExperienceLevelOverrideUrl}"><span class="greyDot">&lt;</span><spring:theme code="text.swithToMobileStore" /></a>
 		<span class="greyDot closeDot"><a href="${stayOnDesktopStoreUrl}">x</a></span>
+		
+		
 	</div>
 </c:if>
 
 
 
 <div id="header" class="clearfix">
+	<div class="headerContent ">
 	<cms:pageSlot position="TopHeaderSlot" var="component">
 		<cms:component component="${component}"/>
 	</cms:pageSlot>
 	
-	<div class="headerContent ">
-		<ul class="nav clearfix">
+	<ul class="nav clearfix">
+	<c:if test="${empty hideHeaderLinks}">
+				<li><a href="<c:url value="/store-finder"/>"><spring:theme code="general.find.a.store" /></a></li>
+				<sec:authorize ifNotGranted="ROLE_ANONYMOUS"><li><ycommerce:testId code="header_signOut"><a href="<c:url value='/logout'/>"><spring:theme code="header.link.logout"/></a></ycommerce:testId></li></sec:authorize>
+			</c:if>
+			<li><a href="<c:url value="/postadd"/>">POSTYOURADD</a></li>
+		
+			<cms:pageSlot position="MiniCart" var="cart" limit="1">
+				<cms:component component="${cart}" element="li" class="miniCart" />
+			</cms:pageSlot>
+			
+	
+			<cms:pageSlot position="HeaderLinks" var="link">
+				<cms:component component="${link}" element="li"/>
+			</cms:pageSlot>
+			
+			
+			
 			<c:if test="${empty hideHeaderLinks}">
 				<c:if test="${uiExperienceOverride}">
 					<li class="backToMobileLink">
@@ -38,7 +57,8 @@
 					</li>
 				</c:if>
 
-				<sec:authorize ifNotGranted="ROLE_ANONYMOUS">
+
+			 	<sec:authorize ifNotGranted="ROLE_ANONYMOUS">
 					<c:set var="maxNumberChars" value="25"/>
 					<c:if test="${fn:length(user.firstName) gt maxNumberChars}">
 						<c:set target="${user}" property="firstName" value="${fn:substring(user.firstName, 0, maxNumberChars)}..."/>
@@ -46,39 +66,25 @@
 					<li class="logged_in"><ycommerce:testId code="header_LoggedUser"><spring:theme code="header.welcome" arguments="${user.firstName},${user.lastName}" htmlEscape="true"/></ycommerce:testId></li>
 				</sec:authorize>
 				<sec:authorize ifAnyGranted="ROLE_ANONYMOUS">
-					<li><ycommerce:testId code="header_Login_link"><a href="<c:url value="/login"/>"><spring:theme code="header.link.login"/></a></ycommerce:testId></li> 
-				<!-- ****Rajesh N******* -->
-				
-				<%-- <li><ycommerce:testId code="header_Login_link"><a href="javascript:void(0)"data-url="<c:url value='/login1/test'/>" class="login-user"><spring:theme code="login.login"/></a></ycommerce:testId></li>
-				 --%>
-				<!-- ************************** -->
+					<li><ycommerce:testId code="header_Login_link"><a href="<c:url value="/login"/>"><spring:theme code="header.link.login"/></a></ycommerce:testId></li>
 				</sec:authorize>
 				<li><ycommerce:testId code="header_myAccount"><a href="<c:url value="/my-account"/>"><spring:theme code="header.link.account"/></a></ycommerce:testId></li>
-			
-			</c:if>
-<li><a href="<c:url value="/postadd"/>">POSTYOURADD</a></li>
-			<cms:pageSlot position="HeaderLinks" var="link">
-				<cms:component component="${link}" element="li"/>
-			</cms:pageSlot>
-		
-			<c:if test="${empty hideHeaderLinks}">
-				<li><a href="<c:url value="/store-finder"/>"><spring:theme code="general.find.a.store" /></a></li>
-				<sec:authorize ifNotGranted="ROLE_ANONYMOUS"><li><ycommerce:testId code="header_signOut"><a href="<c:url value='/logout'/>"><spring:theme code="header.link.logout"/></a></ycommerce:testId></li></sec:authorize>
 			</c:if>
 
-			<cms:pageSlot position="MiniCart" var="cart" limit="1">
-				<cms:component component="${cart}" element="li" class="miniCart" />
-			</cms:pageSlot>
-			
-		</ul>
-	</div>
-
-	<cms:pageSlot position="SearchBox" var="component" element="div" class="headerContent secondRow">
-		<cms:component component="${component}" element="div" />
-	</cms:pageSlot>
-
-
+ </div>
+ <div id="logo">
+ <ul>
 	<cms:pageSlot position="SiteLogo" var="logo" limit="1">
-		<cms:component component="${logo}" class="siteLogo"  element="div"/>
+		<cms:component component="${logo}" class="siteLogo"  />
 	</cms:pageSlot>
+	
+	 <cms:pageSlot position="SearchBox" var="component"  class="headerContent secondRow">
+		<cms:component component="${component}"  />
+	</cms:pageSlot>
+	
+	</ul>
+	</div>
+ 
+</div>
+
 </div>
