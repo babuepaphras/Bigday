@@ -1,11 +1,11 @@
 /*
 ### Site Search
 ********************************************************************/
-
-
-
 .siteSearch .control-group{
-	width:290px;
+	width:600px;
+	float:right; 
+	margin-left:300px;
+	
 }
 
 
@@ -19,21 +19,13 @@
   background: url("../images/storesFacetSearchIcon.png") no-repeat scroll center center transparent;
   border: 0 none;
   display: block;
-  float: right;
+  float: left;
   height: 28px;
   margin: 1px 1px 1px -30px;
   padding: 0;
-  width: 28px;
+  width: 35px;
+  margin-right: -20px;
 }
-
-
-
-
-
-
-
-
-
 
 /*
   ui-autocomplete   
@@ -45,7 +37,7 @@
 }
 
 .ui-autocomplete{
-	width:278px !important;
+	width:260px !important;
 	z-index:10000 !important;
     border: 1px solid #CCCCCC;
 	-webkit-border-radius: 0;
@@ -125,4 +117,3 @@
 .ui-autocomplete .ui-menu-item .thumb + .desc .title{
 	width: 115px;
 }
-

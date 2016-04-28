@@ -4,32 +4,75 @@
 
 
 #header .siteLogo{
-	padding:20px 0;
+	/* padding:20px 0;*/
+/* New Code */
+/* padding:0 5px;  */
+display: block;
+float: left;
+
+  margin-right:10em;
+    /* New Code */
+   
 }
 
 #header .headerContent{
+	
 	float:right;
+	height:0px;
+	margin: 0 -601.5rem;
+  /* add back section padding (1.5rem) */
+  padding: 0.05rem 1.5rem;
+  
+  padding-top:0px;
+  border-left: 600rem solid #F5F8F9;
+  border-right: 600rem solid #F5F8F9;
+  padding-bottom:30px;
+ 
+ 
+ /* New code	*/
+
+/* float:right;	*/	
+	
 }
 
-#header .headerContent.secondRow{
-	clear: both;
-	margin:5px 0 0 0;
+
+/* New css for cart*/
+ 
+ #header .headerContent1{   
+/* padding:140px 0; */
+display: block;
+display:inline;
+float:left;
+/* padding:0; */
+margin-bottom:0.3em;
+
 }
 
+/* New css for cart*/
+ #header .headerContent.secondRow{
+
+ /* New Code */
+	 padding:0 1px; 
+ /* New Code */
+    
+}
 #header .headerContent .nav{
-	height:21px;
-	line-height:1.667em;
-	color:#484848;
-	margin:15px 0 0 0;
-}
+	float:right;
+	height:28px;
+	margin: 0 -601.5rem;
+ /*  add back section padding (1.5rem) */
+  /* padding: 0.25rem 1.5rem; */
+  background:#F5F8F9;
+  border-left: 600rem solid #F5F8F9;
+  border-right: 600rem solid #F5F8F9;
+  }
 
 #header .headerContent .nav > li{
-	float:left;
+	float:right;
 	border-left:1px solid #000;
-	padding: 0 6px;
+	/* padding: 0 6px; */
 	display:block;
-
-}
+	}
 	
 
 #header .headerContent .nav > li:first-child {
@@ -40,29 +83,78 @@
 
 #header .headerContent .nav > li > a{
 	display:block;
+	/* New code*/
+/* padding : 0.4em 0.4em 0.4em 0.4em; */
+color: #666666;
+text-decoration: none;
+line-height : 0.75em;
+padding: 0px 0px;
+
+ padding: 7px 11px;
+/* New code*/
 }
 
+/* New block */
+#header .headerContent .nav > li > a:hover{
+color:black;
+dipslay: inline;
+}
+
+/* New block */
 
 #header .headerContent .nav > li.miniCart > a{
-	text-transform:lowercase; /*  temp */
+	text-transform:lowercase;  temp
+	
+	
 }
 
+#header .headerContent.secondRow
+{
+padding-left: 60px;
+padding-top:10px;
 
 
 
-#header .headerContent.secondRow .yCmsComponent{
-	float: left;
+ }
+ #header .headerContent.secondRow .yCmsComponent{
+ 	float: left;
 }
 
 #header .headerContent.secondRow .yCmsComponent + .yCmsComponent{
 	margin:0 0 0 10px;
+	
+	 
+}
+
+/* New block for callus */
+ 
+ .callus{
+ 
+ /* float:left;
+ dispaly:block;
+ padding: 10px 10px;
+  */
+ 
+/* width: 80em; */
+display:block;
+float: right;
+  width: 90em;
+  margin-right: 1em;
+/* border-right:1px solid #000; */
+padding: -50px 85px 0px 0px;
+margin: 0 0px 0px 0;
+ }
+
+
+#logo
+{
+	margin-left: -200px;
 }
 
 
 
-
-
-.languagecurrencycomponent{
+	     
+/* .languagecurrencycomponent{
 	margin: 0 10px;
 	display: inline-block;
 }
@@ -78,6 +170,5 @@
 
 
 
-
-
+ */
 
