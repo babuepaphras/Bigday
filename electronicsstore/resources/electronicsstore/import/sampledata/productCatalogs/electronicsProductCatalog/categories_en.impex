@@ -10,34 +10,72 @@ $catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[defa
 # Language
 $lang=en
 
+#This is chandrashekar Modification Start
 
 # Create Categories
 UPDATE Category;code[unique=true];$catalogVersion;name[lang=$lang]
- ;1;;Open Catalogue;
- ;106;;Components;
- ;1201;;Fixatives;
- ;1288;;Camera Kits;
- ;1421;;Binoculars;
- ;206;;Data storage;
- ;571;;Cameras;
- ;574;;Film cameras;
- ;575;;Digital Cameras;
- ;576;;Digital Compacts;
- ;577;;Webcams;
- ;578;;Digital SLR;
- ;584;;Hand-held Camcorders;
- ;585;;Camera Accessories & Supplies;
- ;586;;Camera Flashes;
- ;587;;Tripods;
- ;588;;Camera Lenses;
- ;597;;Colour Films;
- ;598;;Black & White Films;
- ;604;;Blank Video Tapes;
- ;814;;Rechargeable Batteries;
- ;816;;Power Supplies;
- ;827;;Power Adapters & Inverters;
- ;829;;Battery Chargers;
- ;902;;Flash Memory;
- ;934;;Camera Cables;
+ 
+ ;1;;Kids Cataloge;
+ ;100;;Kids;
+ ;110;;Toys;
+ ;120;;BabyCare;
+ ;130;;BabyClothing;
+ 
+;2;;Womens Cataloge;
+;200;;Womens;
+;210;;EthinicWear;
+;220;;WesternWear;
+;230;;FootWear;
+
+;3;;Mens Cataloge
+;300;;Mens;
+;310;;Accessories;
+;320;;Watches;
+;330;;Bags;
+
+;4;;Home&Kitchen Cataloge
+;400;;Home&Kitchen;
+;410;;Furniture;
+;420;;KitchenWear;
+;430;;HomeDecor;
+
+;5;;Employee Cataloge
+;500;;Employee;
+;510;;Services;
+;520;;BillPay;
+;530;;Family;
 
 
+
+;6;;Students Cataloge
+;600;;Students;
+;610;;VisaProcess;
+;620;;Jobs;
+;630;;OnlineClass;
+ 
+ 
+;7;;Sports&Fitness Cataloge
+;700;;Sports&Fitness;
+;710;;Sports;
+;720;;Fitness;
+ 
+;8;;Books&Media Cataloge
+;800;;Books&Media;
+;810;;AllBooks;
+;820;;Movies&TVShows;
+ 
+ #This is chandrashekar Modification End
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -7,59 +7,90 @@ $catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[defa
 $supercategories=source(code, $catalogVersion)[unique=true]
 $categories=target(code, $catalogVersion)[unique=true]
 
+#This is chandrashekar Modification Start
 # Insert Categories
 INSERT_UPDATE Category;code[unique=true];allowedPrincipals(uid)[default='customergroup'];$catalogVersion
  ;1
- ;106
- ;206
- ;571
- ;574
- ;575
- ;576
- ;577
- ;578
- ;584
- ;585
- ;586
- ;587
- ;588
- ;597
- ;598
- ;604
- ;814
- ;816
- ;827
- ;829
- ;902
- ;934
- ;1201
- ;1288
- ;1421
+ ;100
+ ;110
+ ;120
+ ;130
+ ;2
+ ;200
+ ;210
+ ;220
+ ;230
+ ;3
+ ;300
+ ;310
+ ;320
+ ;330
+ ;4
+ ;400
+ ;410
+ ;420
+ ;430
+ ;5
+ ;500
+ ;510
+ ;520
+ ;530
+ ;6
+ ;600
+ ;610
+ ;620
+ ;630
+ ;7
+ ;700
+ ;710
+ ;720
+ ;730
+ 
+ ;8
+ ;800
+ ;810
+ ;820
 
+#This is chandrashekar Modification End
+
+#This is chandrashekar Modification Start
 # Insert Category Structure
 INSERT_UPDATE CategoryCategoryRelation;$categories;$supercategories
- ;106;1
- ;206;1
- ;571;1
- ;1421;1
- ;574;571
- ;575;571
- ;577;571
- ;584;571
- ;576;575
- ;578;575
- ;585;571
- ;586;585
- ;587;585
- ;588;585
- ;597;585
- ;598;585
- ;604;585
- ;814;816
- ;816;106
- ;827;816
- ;829;816
- ;902;206
- ;934;585
- ;1201;585
- ;1288;585
+ ;100;1
+ ;110;100
+ ;120;100
+ ;130;100
+ 
+  ;200;2
+ ;210;200
+ ;220;200
+ ;230;200
+ 
+  ;300;3
+ ;310;300
+ ;320;300
+ ;330;300
+ 
+  ;400;4
+ ;410;400
+ ;420;400
+ ;430;400
+ 
+  ;500;5
+ ;510;500
+ ;520;500
+ ;530;500
+ 
+  ;600;6
+ ;610;600
+ ;620;600
+ ;630;600
+ 
+  ;700;7
+ ;710;700
+ ;720;700
+ 
+ ;800;8
+ ;810;800
+ ;820;800
+ #This is chandrashekar Modification End

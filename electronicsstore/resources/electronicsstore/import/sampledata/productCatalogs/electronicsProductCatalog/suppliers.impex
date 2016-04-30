@@ -6,22 +6,48 @@ $productCatalogName=Electronics Product Catalog
 $catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
 $superCategories=superCategories(code, $catalogVersion)
 
+#This is chandrashekar Modification Start
+ 
 # Create Supplier Categories
 INSERT_UPDATE Category;code[unique=true];$superCategories;allowedPrincipals(uid)[default='customergroup'];$catalogVersion
- ;brands;;
- ;brand_1;brands
- ;brand_2;brands
- ;brand_5;brands
- ;brand_10;brands
- ;brand_18;brands
- ;brand_26;brands
- ;brand_75;brands
- ;brand_88;brands
- ;brand_91;brands
- ;brand_103;brands
- ;brand_128;brands
- ;brand_251;brands
- ;brand_702;brands
- ;brand_745;brands
- ;brand_750;brands
- ;brand_2171;brands
+ ;100;;
+ ;110;100
+ ;120;100
+ ;130;100
+ 
+ ;200;;
+ ;210;200
+ ;220;200
+ ;230;200
+ 
+ ;300;;
+ ;310;300
+ ;320;300
+ ;330;300
+ 
+ ;400;;
+ ;410;400
+ ;420;400
+ ;430;400
+ 
+ ;500;;
+ ;510;500
+ ;520;500
+ ;530;500
+ 
+ ;600;;
+ ;610;600
+ ;620;600
+ ;630;600
+ 
+ ;700;;
+ ;710;700
+ ;720;700
+ ;730;700
+ 
+ ;800;;
+ ;810;800
+ ;820;800
+
+#This is chandrashekar Modification End
+ 
