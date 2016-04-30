@@ -12,8 +12,50 @@ $lang=en
 UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];$picture[lang=$lang]
 ;;SiteLogoComponent;/images/theme/logo-hybris.png
 
+#This is chandrashekar Modification Start
 # CMS Link Components
 UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];linkName[lang=$lang]
+;;KidsCategoryLink;"Kids"
+;;ToysCategoryLink;"Toys"
+;;BabyCareCategoryLink;"BabyCare"
+;;BabyClothingCategoryLink;"BabyClothing"
+
+;;WomensCategoryLink;"Womens"
+;;EthinicWearCategoryLink;"EthinicWear"
+;;WesternWearCategoryLink;"WesternWear"
+;;FootWearCategoryLink;"FootWear"
+
+;;MensCategoryLink;"Mens"
+;;AccessoriesCategoryLink;"Accessories"
+;;WatchesCategoryLink;"Watches"
+;;BagsCategoryLink;"Bags"
+
+;;Home&KitchenCategoryLink;"Home&Kitchen"
+;;FurnitureCategoryLink;"Furniture"
+;;KitchenWearCategoryLink;"KitchenWear"
+;;HomeDecorCategoryLink;"HomeDecor"
+
+;;EmployeeCategoryLink;"Employee"
+;;ServicesCategoryLink;"Services"
+;;BillPayCategoryLink;"BillPay"
+;;FamilyCategoryLink;"Family"
+
+;;StudentsCategoryLink;"Students"
+;;VisaProcessCategoryLink;"VisaProcess"
+;;JobsCategoryLink;"Jobs"
+;;OnlineClassCategoryLink;"OnlineClass"
+
+;;Books&MediaCategoryLink;"Books&Media"
+;;AllBooksCategoryLink;"AllBooks"
+;;Movies&TVShowsCategoryLink;"Movies&TVShows"
+
+;;Sports&FitnessCategoryLink;"Sports&Fitness"
+;;SportsCategoryLink;"Sports"
+;;FitnessCategoryLink;"Fitness"
+
+#This is chandrashekar Modification End
+
+;;HomepageNavLink;"Home"
 ;;AboutAcceleratorLink;"About Commerce Accelerator"
 ;;AboutHybrisLink;"About hybris"
 ;;AccountAddressBookLink;"Address Book"
@@ -22,45 +64,13 @@ UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];linkName[lang=$
 ;;AccountManagePaymentDetailsLink;"Manage your payment details"
 ;;AccountOrderHistoryLink;"Order History"
 ;;AccountPaymentDetailsLink;"Payment Details"
-;;AccountPersonalDetailsLink;"Update personal details"
+;;AccountPersonalDetailsLink;"Update personal details"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 ;;AccountProfileLink;"Profile"
 ;;AccountUpdatePasswordLink;"Change your password"
 ;;AccountViewOrderHistoryLink;"View order history"
 ;;AgileCommerceBlogLink;"Agile Commerce Blog"
-;;AllBrandsCategoryLink;"Brands"
-;;BlackAndWhiteFilmsCategoryLink;"Black & White Films"
-;;BlankVideotapesCategoryLink;"Blank Videotapes"
-;;CameraAccessoriesCategoryLink;"Camera Accessories & Supplies"
-;;CameraLensesCategoryLink;"Camera Lenses"
-;;CamerasCategoryLink;"Cameras"
-;;CamerasFlashesCategoryLink;"Camera Flashes"
-;;CanonBrandCategoryLink;"Canon"
-;;ColourFilmsCategoryLink;"Color Films"
-;;ComponentsCategoryLink;"Components"
-;;ContactUsLink;"Contact Us"
-;;DigitalCamerasCategoryLink;"Digital Cameras"
-;;DigitalCompactsCategoryLink;"Compact Cameras"
-;;DigitalSLRCategoryLink;"SLR Cameras"
-;;DocumentationLink;"Documentation"
 ;;FAQLink;"FAQ"
 ;;FacebookLink;"Facebook"
-;;FilmCamerasCategoryLink;"Film Cameras"
-;;FlashMemoryCategoryLink;"Flash Memory"
-;;FujifilmBrandCategoryLink;"Fujifilm"
-;;HandheldCamcordersCategoryLink;"Hand Held Camcorders"
-;;HomepageNavLink;"Home"
-;;IciduBrandCategoryLink;"Icidu"
-;;KingstonBrandCategoryLink;"Kingston"
-;;KodakBrandCategoryLink;"Kodak"
-;;LinkedInLink;"Linked In"
-;;PowerSuppliesCategoryLink;"Power Supplies"
-;;SamsungBrandCategoryLink;"Samsung"
-;;SonyBrandCategoryLink;"Sony"
-;;SpecialOffersLink;"Special Offers"
-;;SweexBrandCategoryLink;"Sweex"
-;;TDKBrandCategoryLink;"TDK"
-;;ToshibaBrandCategoryLink;"Toshiba"
-;;TripodsCategoryLink;"Tripods"
 ;;TwitterLink;"Twitter"
 
 # Lightbox Banner for Mini Cart (banner is not localizable so we must create a separate banner per language)
@@ -103,34 +113,31 @@ UPDATE CartSuggestionComponent;$contentCV[unique=true];uid[unique=true];title[la
 
 # Category Pages
 UPDATE CategoryPage;$contentCV[unique=true];uid[unique=true];title[lang=$lang]
-;;Cameras;"Cameras"
-;;DigitalCameras;"Digital Cameras"
 
-# CMS Navigation Nodes
 UPDATE CMSNavigationNode;$contentCV[unique=true];uid[unique=true];title[lang=$lang]
+#;;ElectronicsSiteRootNode;"ElectronicsSiteRoot"
+;;ElectronicsNavNode;"Electronics"
 ;;AcceleratorNavNode;"Accelerator"
-;;AccessoriesNavNode;"Accessories"
-;;AccessoryBrandLinksNavNode;"Accessories"
 ;;AccountAddressBookNavNode;"Address Book"
 ;;AccountLeftNavNode;"My Account"
 ;;AccountOrderHistoryNavNode;"Order History"
 ;;AccountPaymentDetailsNavNode;"Payment Details"
 ;;AccountProfileNavNode;"Profile"
-;;BrandLinksNavNode;"Cameras"
-;;BrandsNavNode;"Brands"
-;;CameraAccessoriesNavNode;"Camera Accessories & Supplies"
-;;CamerasNavNode;"Cameras"
-;;DigitalCamerasNavNode;"Digital Cameras"
-;;ElectronicsNavNode;"Electronics Site"
-;;FilmCamerasNavNode;"Film Cameras"
-;;FlashMemoryNavNode;"Flash Memory"
+
+#This is chandrashekar Modification Start
+
+;;KidsNavNode;"Kids"
+;;WomensNavNode;"Womens"
+;;MensNavNode;"Mens"
+;;Home&KitchenNavNode;"Home&Kitchen"
+;;EmployeeNavNode;"Employee"
+;;StudentsNavNode;"Students"
+;;Books&MediaNavNode;"Books&Media"
+;;Sports&FitnessNavNode;"Sports&Fitness"
+
+#This is chandrashekar Modification  End
+
 ;;FollowUsNavNode;"Follow Us"
-;;HandheldCamcordersNavNode;"Hand Held Camcorders"
-;;HybrisNavNode;"Hybris"
-;;PowerSuppliesNavNode;"Power Supplies"
-;;SiteRootNode;"SiteRoot"
-;;SuppliesNavNode;"Supplies"
-;;WebcamsNavNode;"Webcams"
 
 # Electronics FAQ Page 
 
@@ -179,21 +186,19 @@ UPDATE BannerComponent;$contentCV[unique=true];uid[unique=true];headline[lang=$l
 ;;CarouselCamcorderBanner;New - Ignite your passion for film with the latest HD camcorder...;Elec_468x418_HomeCarouselCamcorder_EN_01.jpg;""
 ;;CarouselCyberBanner;What colour are you? Sony Cybershot - a colour for any mood.;Elec_468x418_HomeCarouselCyber_EN_01.jpg;""
 ;;CarouselFunBanner;Fun on the run  - Never miss a memory!;Elec_468x418_HomeCarouselFun_EN_01.jpg;""
-;;TripodComponent;tripod;1934793_1719.jpg;"My,My Tripod"
 ;;DigitalCompactCamerasBannerComponent;Digital Compact Cameras;Elec_228x178_HomeCat_DigiCom_EN_01.jpg;"Find the perfect camera to capture those special moments"
 ;;DigitalSLRCamerasBannerComponent;Digital SLR Cameras;Elec_228x178_HomeCat_DigiSLR_EN_01.jpg;"See the latest DSLR technology from the leading brands"
 ;;KodakEasyshareBannerComponent;Kodak EASYSHARE V1253;1320808-1767.jpg;"Seize the moment with 12 megapixel photos!"
 ;;MemoryBannerComponent;Camera and Camcorder Memory;Elec_228x178_HomeCat_Memory_EN_01.jpg;"Exclusive discounts on our memory cards"
 ;;SonyCybershotBannerComponent;Sony Cybershot DSC-S930;1992695-Sony-DSC-S930P-11441.jpg;"Compact, easy to use and amazingly affordable."
 ;;SonyDSCBannerComponent;Sony DSC-H20;1978440-Sony-DSC-H20-114081.jpg;"Perfect for serious performance in a compact design."
+;;TripodComponent;tripod;1934793_1719.jpg;"My,My Tripod"
 
 UPDATE ProductCarouselComponent;$contentCV[unique=true];uid[unique=true];title[lang=$lang]
 ;;ElectronicsHomepageProductCarouselComponent;Our Bestselling Products
 
-# Electronics Camera Accessories and Supplies Category Landing Page
 
-UPDATE CategoryPage;$contentCV[unique=true];uid[unique=true];title[lang=$lang]
-;;CamerasAccessoriesAndSuppliesCategoryPage;Cameras Accessories & Supplies
+
 
 # Media Content
 INSERT_UPDATE Media;$contentCV[unique=true];code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator];mime[default='image/jpeg'];folder(qualifier)[default='images'];altText

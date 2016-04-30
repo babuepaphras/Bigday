@@ -17,7 +17,7 @@ $jarResourceCms=jar:de.hybris.platform.electronicsstore.constants.Electronicssto
 
 # CMS Site Settings
 UPDATE CMSSite;uid[unique=true];defaultPreviewCategory(code, $productCV);defaultPreviewProduct(code, $productCV)
-;electronics;575;2053367
+;electronics;100;2053367
 
 # Site Logo
 INSERT_UPDATE Media;$contentCV[unique=true];code[unique=true];realfilename;@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator];mime[default='image/jpeg'];altText;folder(qualifier)[default='images']
@@ -33,34 +33,42 @@ INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];name;url
 ;;HomepageNavLink;Home Page Nav Link;/;HomepageNavLink;HomepageNavLink;;;;
 ;;StoreFinderLink;Store Finder Link;/store-finder;StoreFinderLink;StoreFinderLink;;;;
 ;;LoginLink;Login Link;/login;LoginLink;LoginLink;;;;
-;;AllBrandsCategoryLink;All Brands Link;/Brands/c/brands;AllBrandsCategoryLink;AllBrandsCategoryLink;;brands;;
-;;SonyBrandCategoryLink;Sony Link;/Brands/Sony/c/brand_5;SonyBrandCategoryLink;SonyBrandCategoryLink;;brand_5;;
-;;CanonBrandCategoryLink;Canon Link;/Brands/Canon/c/brand_10;CanonBrandCategoryLink;CanonBrandCategoryLink;;brand_10;;
-;;KodakBrandCategoryLink;Kodak Link;/Brands/Kodak/c/brand_88;KodakBrandCategoryLink;KodakBrandCategoryLink;;brand_88;;
-;;SamsungBrandCategoryLink;Samsung Link;/Brands/Samsung/c/brand_26;SamsungBrandCategoryLink;SamsungBrandCategoryLink;;brand_26;;
-;;ToshibaBrandCategoryLink;Toshiba Link;/Brands/Toshiba/c/brand_2;ToshibaBrandCategoryLink;ToshibaBrandCategoryLink;;brand_2;;
-;;FujifilmBrandCategoryLink;Fujifilm Link;/Brands/Fujifilm/c/brand_75;FujifilmBrandCategoryLink;FujifilmBrandCategoryLink;;brand_75;;
-;;KingstonBrandCategoryLink;Kingston Link;/Brands/Kingston/c/brand_18;KingstonBrandCategoryLink;KingstonBrandCategoryLink;;brand_18;;
-;;IciduBrandCategoryLink;Icidu Link;/Brands/ICIDU/c/brand_2171;IciduBrandCategoryLink;IciduBrandCategoryLink;;brand_2171;;
-;;TDKBrandCategoryLink;TDK Link;/Brands/TDK/c/brand_251;TDKBrandCategoryLink;TDKBrandCategoryLink;;brand_251;;
-;;SweexBrandCategoryLink;Sweex Link;/Brands/Sweex/c/brand_702;SweexBrandCategoryLink;SweexBrandCategoryLink;;brand_702;;
-;;DigitalCompactsCategoryLink;Digital Compacts Link;/Open-Catalogue/Cameras/Digital-Cameras/Digital-Compacts/c/576;DigitalCompactsCategoryLink;DigitalCompactsCategoryLink;;576;;
-;;DigitalSLRCategoryLink;Digital SLR Link;/Open-Catalogue/Cameras/Digital-Cameras/Digital-SLR/c/578;DigitalSLRCategoryLink;DigitalSLRCategoryLink;;578;;
-;;CamerasCategoryLink;Cameras Category Link;/Open-Catalogue/Cameras/c/571;CamerasCategoryLink;CamerasCategoryLink;;571;;
-;;ComponentsCategoryLink;Components Category Link;/Open-Catalogue/Components/c/106;ComponentsCategoryLink;ComponentsCategoryLink;;106;;
-;;DigitalCamerasCategoryLink;Digital Cameras Category Link;/Open-Catalogue/Cameras/Digital-Cameras/c/575;DigitalCamerasCategoryLink;DigitalCamerasCategoryLink;;575;;
-;;FilmCamerasCategoryLink;Film Cameras Category Link;/Open-Catalogue/Cameras/Film-Cameras/c/574;FilmCamerasCategoryLink;FilmCamerasCategoryLink;;574;;
-;;CameraAccessoriesCategoryLink;Camera Accessories Category Link;/Open-Catalogue/Cameras/Camera-Accessories-26-Supplies/c/585;CameraAccessoriesCategoryLink;CameraAccessoriesCategoryLink;;585;;
-;;PowerSuppliesCategoryLink;Power Supplies Category Link;/Open-Catalogue/Components/Power-Supplies/c/816;PowerSuppliesCategoryLink;PowerSuppliesCategoryLink;;816;;
-;;FlashMemoryCategoryLink;Flash Memory Category Link;/Open-Catalogue/Data-storage/Flash-Memory/c/902;FlashMemoryCategoryLink;FlashMemoryCategoryLink;;902;;
-;;HandheldCamcordersCategoryLink;Handheld Camcorders Category Link;/Open-Catalogue/Cameras/Hand-held-Camcorders/c/584;HandheldCamcordersCategoryLink;HandheldCamcordersCategoryLink;;584;;
-;;SpecialOffersLink;Special Offers Link;"/Open-Catalogue/c/1?q=%3AtopRated%3AallPromotions%3ABOGOFElectronics%3AallPromotions%3A10DiscountCanonEOS450D%3AallPromotions%3AMultiBuyElectronics%3AallPromotions%3APerfectPartnerElectronics%3AallPromotions%3AProductBundleElectronics";SpecialOffersLink;SpecialOffersLink;;1;;
-;;CamerasFlashesCategoryLink;Cameras Flashes Category Link;/Open-Catalogue/Cameras/Camera-Accessories-26-Supplies/Camera-Flashes/c/586;CamerasFlashesCategoryLink;CamerasFlashesCategoryLink;;586;;
-;;TripodsCategoryLink;Tripods Category Link;/Open-Catalogue/Cameras/Camera-Accessories-26-Supplies/Tripods/c/587;TripodsCategoryLink;TripodsCategoryLink;;587;;
-;;CameraLensesCategoryLink;Camera Lenses Category Link;/Open-Catalogue/Cameras/Camera-Accessories-26-Supplies/Camera-Lenses/c/588;CameraLensesCategoryLink;CameraLensesCategoryLink;;588;;
-;;ColourFilmsCategoryLink;ColourFilms Category Link;/Open-Catalogue/Cameras/Camera-Accessories-26-Supplies/Colour-Films/c/597;ColourFilmsCategoryLink;ColourFilmsCategoryLink;;597;;
-;;BlackAndWhiteFilmsCategoryLink;Black And WhiteFilms Category Link;/Open-Catalogue/Cameras/Camera-Accessories-26-Supplies/Black-26-White-Films/c/598;BlackAndWhiteFilmsCategoryLink;BlackAndWhiteFilmsCategoryLink;;598;;
-;;BlankVideotapesCategoryLink;BlankVideotapes Category Link;/Open-Catalogue/Cameras/Camera-Accessories-26-Supplies/Blank-Video-Tapes/c/604;BlankVideotapesCategoryLink;BlankVideotapesCategoryLink;;604;;
+
+#This is chandrashekar Modification Start
+
+;;KidsCategoryLink;Kids Category Link;/Kids Cataloge/Kids/c/100;KidsCategoryLink;KidsCategoryLink;;100;;
+;;ToysCategoryLink;Toys Link;/Kids Cataloge/Kids/Toys/c/110;ToysCategoryLink;ToysCategoryLink;;110;;
+;;BabyCareCategoryLink;BabyCare Link;/Kids Cataloge/Kids/BabyCare/c/120;BabyCareCategoryLink;BabyCareCategoryLink;;120;;
+;;BabyClothingCategoryLink;BabyClothing Link;/Kids Cataloge/Kids/BabyClothing/c/130;BabyClothingCategoryLink;BabyClothingCategoryLink;;130;;
+;;WomensCategoryLink;Womens Category Link;/Womens Cataloge/Womens/c/200;WomensCategoryLink;WomensCategoryLink;;200;;
+;;EthinicWearCategoryLink;EthinicWear Link;/Womens Cataloge/Womens/EthinicWear/c/210;EthinicWearCategoryLink;EthinicWearCategoryLink;;210;;
+;;WesternWearCategoryLink;WesternWear Link;/Womens Cataloge/Womens/WesternWear/c/220;WesternWearCategoryLink;WesternWearCategoryLink;;220;;
+;;FootWearCategoryLink;FootWear Link;/Womens Cataloge/Womens/FootWear/c/230;FootWearCategoryLink;FootWearCategoryLink;;230;;
+;;MensCategoryLink;Mens Category Link;/Mens Cataloge/Mens/c/300;MensCategoryLink;MensCategoryLink;;300;;
+;;AccessoriesCategoryLink;Accessories Link;/Mens Cataloge/Mens/Accessories/c/310;AccessoriesCategoryLink;AccessoriesCategoryLink;;310;;
+;;WatchesCategoryLink;Watches Link;/Mens Cataloge/Mens/Watches/c/320;WatchesCategoryLink;WatchesCategoryLink;;320;;
+;;BagsCategoryLink;Bags Link;/Mens Cataloge/Mens/Bags/c/330;BagsCategoryLink;BagsCategoryLink;;310;;
+;;Home&KitchenCategoryLink;Home&Kitchen Category Link;/Home&Kitchen Cataloge/Home&Kitchen/c/400;Home&KitchenCategoryLink;Home&KitchenCategoryLink;;400;;
+;;FurnitureCategoryLink;Furniture Link;/Home&Kitchen Cataloge/Home&Kitchen/Furniture/c/410;FurnitureCategoryLink;FurnitureCategoryLink;;410;;
+;;KitchenWearCategoryLink;KitchenWear Link;/Home&Kitchen Cataloge/Home&Kitchen/KitchenWear/c/420;KitchenWearCategoryLink;KitchenWearCategoryLink;;420;;
+;;HomeDecorCategoryLink;HomeDecor Link;/Home&Kitchen Cataloge/Home&Kitchen/HomeDecor/c/430;HomeDecorCategoryLink;HomeDecorCategoryLink;;430;;
+;;EmployeeCategoryLink;Employee Category Link;/Employee Cataloge/Employee/c/500;EmployeeCategoryLink;EmployeeCategoryLink;;500;;
+;;ServicesCategoryLink;Services Link;/Employee Cataloge/Employee/Services/c/510;ServicesCategoryLink;ServicesCategoryLink;;510;;
+;;BillPayCategoryLink;BillPay Link;/Employee Cataloge/Employee/BillPay/c/520;BillPayCategoryLink;BillPayCategoryLink;;520;;
+;;FamilyCategoryLink;Family Link;/Employee Cataloge/Employee/Family/c/530;FamilyCategoryLink;FamilyCategoryLink;;530;;
+;;StudentsCategoryLink;Students Category Link;/Students Cataloge/Students/c/600;StudentsCategoryLink;StudentsCategoryLink;;600;;
+;;VisaProcessCategoryLink;VisaProcess Link;/Students Cataloge/Students/VisaProcess/c/610;VisaProcessCategoryLink;VisaProcessCategoryLink;;610;;
+;;JobsCategoryLink;Jobs Link;/Students Cataloge/Students/Jobs/c/620;JobsCategoryLink;JobsCategoryLink;;620;;
+;;OnlineClassCategoryLink;OnlineClass Link;/Students Cataloge/Students/OnlineClass/c/630;OnlineClassCategoryLink;OnlineClassCategoryLink;;630;;
+;;Books&MediaCategoryLink;Books&Media Category Link;/Books&Media Cataloge/Books&Media/c/800;Books&MediaCategoryLink;Books&MediaCategoryLink;;800;;
+;;AllBooksCategoryLink;AllBooks Link;/AllBooks Cataloge/AllBooks/AllBooks/c/810;AllBooksCategoryLink;AllBooksCategoryLink;;810;;
+;;Movies&TVShowsCategoryLink;Movies&TVShows Link;/Movies&TVShows Cataloge/Movies&TVShows/Movies&TVShows/c/820;Movies&TVShowsCategoryLink;Movies&TVShowsCategoryLink;;820;;
+;;Sports&FitnessCategoryLink;Sports&Fitness Category Link;/Sports&Fitness Cataloge/Sports&Fitness/c/700;Sports&FitnessCategoryLink;Sports&FitnessCategoryLink;;700;;
+;;SportsCategoryLink;Sports Link;/Sports&Fitness Cataloge/Sports&Fitness/Sports/c/710;SportsCategoryLink;SportsCategoryLink;;710;;
+;;FitnessCategoryLink;Fitness\ Link;/Sports&Fitness Cataloge/Sports&Fitness/Fitness/c/720;FitnessCategoryLink;FitnessCategoryLink;;720;;
+
+#This is chandrashekar Modification End
+
 ;;AboutAcceleratorLink;About Accelerator Link;"http://www.hybris.com/multichannel-accelerator";AboutAcceleratorLink;AboutAcceleratorLink;newWindow;;;
 ;;DocumentationLink;Documentation Link;"https://wiki.hybris.com/display/release5/Release+5+Documentation+Home";DocumentationLink;DocumentationLink;newWindow;;;
 ;;AboutHybrisLink;About Hybris Link;"http://www.hybris.com";AboutHybrisLink;AboutHybrisLink;newWindow;;;
@@ -82,7 +90,6 @@ INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];name;url
 ;;AccountOrderHistoryLink;AccountOrderHistoryLink;/my-account/orders;AccountOrderHistoryLink;AccountOrderHistoryLink;;;;
 ;;AccountViewOrderHistoryLink;AccountViewOrderHistoryLink;/my-account/orders;AccountViewOrderHistoryLink;AccountViewOrderHistoryLink;;;;
 
-
 # Lightbox Banner for Mini Cart
 INSERT_UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef;urlLink
 ;;LightboxHomeDeliveryBannerComponent;Lightbox Home Delivery Banner Component;LightboxHomeDeliveryBannerComponent;
@@ -91,18 +98,20 @@ INSERT_UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];nam
 INSERT_UPDATE MiniCartComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef;totalDisplay(code);shownProductCount;lightboxBannerComponent(&componentRef)
 ;;MiniCart;Mini Cart;MiniCart;SUBTOTAL;3;LightboxHomeDeliveryBannerComponent
 
+#This is chandrashekar Modification Start
+
 # Navigation Bar Component
 INSERT_UPDATE NavigationBarComponent;$contentCV[unique=true];uid[unique=true];name;wrapAfter;link(uid, $contentCV);styleClass;&componentRef
-;;CamerasBarComponent;Cameras Bar Component;10;CamerasCategoryLink;;CamerasBarComponent
-;;ComponentsBarComponent;Components Bar Component;10;ComponentsCategoryLink;;ComponentsBarComponent
-;;DigitalCamerasBarComponent;Digital Cameras Bar Component;10;DigitalCamerasCategoryLink;;DigitalCamerasBarComponent
-;;FilmCamerasBarComponent;Film Cameras Bar Component;10;FilmCamerasCategoryLink;;FilmCamerasBarComponent
-;;CameraAccessoriesBarComponent;Camera Accessories BarComponent;10;CameraAccessoriesCategoryLink;;CameraAccessoriesBarComponent
-;;PowerSuppliesBarComponent;Power Supplies Bar Component;10;PowerSuppliesCategoryLink;;PowerSuppliesBarComponent
-;;FlashMemoryBarComponent;Flash Memory Bar Component;10;FlashMemoryCategoryLink;;FlashMemoryBarComponent
-;;HandheldCamcordersBarComponent;Handheld Camcorders Bar Component;10;HandheldCamcordersCategoryLink;;HandheldCamcordersBarComponent
-;;SpecialOffersBarComponent;Special Offers Bar Component;10;SpecialOffersLink;special_offer;SpecialOffersBarComponent
+;;KidsBarComponent;KidsBarComponent;10;KidsCategoryLink;;KidsBarComponent
+;;WomensBarComponent;WomensBarComponent;10;WomensCategoryLink;;WomensBarComponent
+;;MensBarComponent;MensBarComponent;10;MensCategoryLink;;MensBarComponent
+;;Home&KitchenBarComponent;Home&KitchenBarComponent;10;Home&KitchenCategoryLink;;Home&KitchenBarComponent
+;;EmployeeBarComponent;EmployeeBarComponent;10;EmployeeCategoryLink;;EmployeeBarComponent
+;;StudentsBarComponent;StudentsBarComponent;10;StudentsCategoryLink;;StudentsBarComponent
+;;Sports&FitnessBarComponent;Sports&FitnessBarComponent;10;Sports&FitnessCategoryLink;;Sports&FitnessBarComponent
+;;Books&MediaBarComponent;Books&MediaBarComponent;10;Books&MediaCategoryLink;;Books&MediaBarComponent
 
+#This is chandrashekar Modification End
 
 # Navigation Bar Component
 INSERT_UPDATE AccountNavigationComponent;$contentCV[unique=true];uid[unique=true];name;navigationNode(&nodeRef);styleClass;&componentRef
@@ -116,9 +125,13 @@ INSERT_UPDATE AccountNavigationComponent;$contentCV[unique=true];uid[unique=true
 INSERT_UPDATE AccountNavigationCollectionComponent;$contentCV[unique=true];uid[unique=true];name;components(uid, $contentCV);&componentRef
 ;;AccountHomepageComponent;Account Homepage Component;AccountProfileNavigationComponent,AccountAddressBookNavigationComponent,AccountPaymentDetailsNavigationComponent,AccountOrderHistoryNavigationComponent;AccountHomepageComponent
 
+#This is chandrashekar Modification Start
+
 # Navigation Bar Component
 INSERT_UPDATE NavigationBarCollectionComponent;$contentCV[unique=true];uid[unique=true];name;components(uid, $contentCV);&componentRef
-;;NavBarComponent;Navigation Bar Collection Componeent;BrandsBarComponent,DigitalCamerasBarComponent,FilmCamerasBarComponent,HandheldCamcordersBarComponent,PowerSuppliesBarComponent,FlashMemoryBarComponent,CameraAccessoriesBarComponent,SpecialOffersBarComponent;NavBarComponent
+;;NavBarComponent;Navigation Bar Collection Component;KidsBarComponent,WomensBarComponent,MensBarComponent,Home&KitchenBarComponent,StudentsBarComponent,Books&MediaBarComponent,EmployeeBarComponent,Sports&FitnessBarComponent;NavBarComponent
+
+#This is chandrashekar Modification End
 
 # CMS tabs components
 INSERT_UPDATE CMSTabParagraphComponent;$contentCV[unique=true];uid[unique=true];name;visible;&componentRef
@@ -219,43 +232,62 @@ INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];cmsComponents
 ;;CrossSellingSlot;accessories
 ;;ProductLeftRefinements;RefinementFacetComponent
 
+
+
 INSERT_UPDATE Media;$contentCV[unique=true];code[unique=true];mime;realfilename;@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];folder(qualifier)[default='images']
 ;;CamerasPagePreview;text/png;CamerasPage.png;$jarResourceCms/preview-images/electronics/CamerasPage.png
 ;;DigitalCamerasPagePreview;text/png;DigitalCamerasPage.png;$jarResourceCms/preview-images/electronics/DigitalCamerasPage.png
 ;;CameraAccessoriesPagePreview;text/png;CameraAccessoriesPage.png;$jarResourceCms/preview-images/electronics/CameraAccessoriesPage.png
 
+#This is chandrashekar Modification Start
+
 # Category Pages
 INSERT_UPDATE CategoryPage;$contentCV[unique=true];uid[unique=true];name;masterTemplate(uid,$contentCV);defaultPage;approvalStatus(code)[default='approved'];previewImage(code, $contentCV)
-;;Cameras;Cameras;ProductListPageTemplate;false;;CamerasPagePreview
-;;DigitalCameras;Digital Cameras;ProductListPageTemplate;false;;DigitalCamerasPagePreview
+;;Kids;Kids;ProductListPageTemplate;false;;
+;;Womens;Womens;ProductListPageTemplate;false;;
+;;Mens;Mens;ProductListPageTemplate;false;;
+;;Home&Kitchen;Home&Kitchen;ProductListPageTemplate;false;;
+;;Employee;Employee;ProductListPageTemplate;false;;
+;;Students;Students;ProductListPageTemplate;false;;
+;;Sports&Fitness;Sports&Fitness;ProductListPageTemplate;false;;
+;;Books&Media;Books&Media;ProductListPageTemplate;false;;
+
+#This is chandrashekar Modification End
 
 # Category Page Restrictions
 INSERT_UPDATE CMSCategoryRestriction;$contentCV[unique=true];uid[unique=true];name;categories(code, $productCV);pages(uid, $contentCV)
-;;Cameras-LandingPageRestriction;Restriction for Cameras page;571;Cameras
-;;DigitalCameras-LandingPageRestriction;Restriction for Digital Cameras page;575;DigitalCameras
+
 
 # CMS Navigation Nodes #
 INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;children(uid,$contentCV)[mode=append]
 ;root;;root;;
 
+#This is chandrashekar Modification Start
+
 # CMS Navigation Nodes
 INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;parent(uid, $contentCV);links(&linkRef);&nodeRef
 ;SiteRootNode;;SiteRootNode;root;;SiteRootNode
 ;ElectronicsNavNode;;Electronics Site;SiteRootNode;HomepageNavLink;ElectronicsNavNode
-;BrandsNavNode;;Brand Links;ElectronicsNavNode;AllBrandsCategoryLink;BrandsNavNode
-;BrandLinksNavNode;;Brand Links;BrandsNavNode;CanonBrandCategoryLink,SonyBrandCategoryLink,KodakBrandCategoryLink,SamsungBrandCategoryLink,ToshibaBrandCategoryLink,FujifilmBrandCategoryLink;BrandLinksNavNode
-;AccessoryBrandLinksNavNode;;Accessory Brand Links;BrandsNavNode;KingstonBrandCategoryLink,IciduBrandCategoryLink,TDKBrandCategoryLink,SweexBrandCategoryLink;AccessoryBrandLinksNavNode
-;DigitalCameraTypesNavNode;;Digital Camera Type Links;DigitalCamerasNavNode;DigitalCompactsCategoryLink,DigitalSLRCategoryLink;DigitalCameraTypesNavNode
-;CamerasNavNode;;Cameras Category;ElectronicsNavNode;DigitalCamerasCategoryLink,FilmCamerasCategoryLink;CamerasNavNode
-;DigitalCamerasNavNode;;Digital Cameras Category;CamerasNavNode;DigitalCamerasCategoryLink;DigitalCamerasNavNode
-;FilmCamerasNavNode;;Film Cameras Category;CamerasNavNode;FilmCamerasCategoryLink;FilmCamerasNavNode
-;WebcamsNavNode;;Webcams Category;CamerasNavNode;;WebcamsNavNode
-;CameraAccessoriesNavNode;;Camera Accessories Category;CamerasNavNode;CameraAccessoriesCategoryLink;CameraAccessoriesNavNode
-;HandheldCamcordersNavNode;;Hand-held Camcorders Category;CamerasNavNode;HandheldCamcordersCategoryLink;HandheldCamcordersNavNode
-;PowerSuppliesNavNode;;Power Supplies Category;ElectronicsNavNode;PowerSuppliesCategoryLink;PowerSuppliesNavNode
-;FlashMemoryNavNode;;Flash Memory Category;ElectronicsNavNode;FlashMemoryCategoryLink;FlashMemoryNavNode
-;AccessoriesNavNode;;Accessories Links;CameraAccessoriesNavNode;CamerasFlashesCategoryLink,TripodsCategoryLink,CameraLensesCategoryLink;AccessoriesNavNode
-;SuppliesNavNode;;Supplies Links;CameraAccessoriesNavNode;ColourFilmsCategoryLink,BlackAndWhiteFilmsCategoryLink,BlankVideotapesCategoryLink;SuppliesNavNode
+
+;KidsNavNode;;Kids Links;ElectronicsNavNode;KidsCategoryLink;KidsNavNode
+;KidsLinksNavNode;;Kids Links;KidsNavNode;ToysCategoryLink,BabyCareCategoryLink,BabyClothingCategoryLink;KidsLinksNavNode
+;WomensNavNode;;Womens Links;ElectronicsNavNode;WomensCategoryLink;WomensNavNode
+;WomensLinksNavNode;;Womens Links;WomensNavNode;EthinicWearCategoryLink,WesternWearCategoryLink,FootWearCategoryLink;WomensLinksNavNode
+;MensNavNode;;Mens Links;ElectronicsNavNode;MensCategoryLink;MensNavNode
+;MensLinksNavNode;;Mens Links;MensNavNode;AccessoriesCategoryLink,WatchesCategoryLink,BagsCategoryLink;MensLinksNavNode
+;Home&KitchenNavNode;;Home&Kitchen Links;ElectronicsNavNode;Home&KitchenCategoryLink;Home&KitchenNavNode
+;Home&KitchenLinksNavNode;;Home&Kitchen Links;Home&KitchenNavNode;FurnitureCategoryLink,KitchenWearCategoryLink,HomeDecorCategoryLink;Home&KitchenLinksNavNode
+;EmployeeNavNode;;Employee Links;ElectronicsNavNode;EmployeeCategoryLink;EmployeeNavNode
+;EmployeeLinksNavNode;;Employee Links;EmployeeNavNode;ServicesCategoryLink,BillPayCategoryLink,FamilyCategoryLink;GiftCardsLinksNavNode
+;StudentsNavNode;;Students Links;ElectronicsNavNode;StudentsCategoryLink;StudentsNavNode
+;StudentsLinksNavNode;;Students Links;StudentsNavNode;VisaProcessCategoryLink,JobsCategoryLink,OnlineClassCategoryLink;StudentsLinksNavNode
+;Books&MediaNavNode;;Books&Media Links;ElectronicsNavNode;Books&MediaCategoryLink;Books&MediaNavNode
+;Books&MediaLinksNavNode;;Books&Media Links;Books&MediaNavNode;AllBooksCategoryLink,Movies&TVShowsCategoryLink;Books&MediaLinksNavNode
+;Sports&FitnessNavNode;;Sports&Fitness Links;ElectronicsNavNode;Sports&FitnessCategoryLink;Sports&FitnessNavNode
+;Sports&FitnessLinksNavNode;;Sports&Fitness Links;Sports&FitnessNavNode;SportsCategoryLink,FitnessCategoryLink;Sports&FitnessLinksNavNode
+
+#This is chandrashekar Modification End
+
 ;AcceleratorNavNode;;Accelerator Pages;ElectronicsNavNode;AboutAcceleratorLink,FAQLink;AcceleratorNavNode
 ;HybrisNavNode;;Hybris Pages;ElectronicsNavNode;AboutHybrisLink,ContactUsLink;HybrisNavNode
 ;FollowUsNavNode;;Follow Us Pages;ElectronicsNavNode;AgileCommerceBlogLink,LinkedInLink,FacebookLink,TwitterLink;FollowUsNavNode
@@ -265,18 +297,22 @@ INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;pa
 ;AccountPaymentDetailsNavNode;;Address Book;SiteRootNode;AccountManagePaymentDetailsLink;AccountPaymentDetailsNavNode
 ;AccountOrderHistoryNavNode;;Order History;SiteRootNode;AccountViewOrderHistoryLink;AccountOrderHistoryNavNode
 
+#This is chandrashekar Modification Start
 # Navigation Bar Component
 INSERT_UPDATE NavigationBarComponent;$contentCV[unique=true];uid[unique=true];navigationNode(&nodeRef);dropDownLayout(code)
-;;CamerasBarComponent;CamerasNavNode
-;;DigitalCamerasBarComponent;DigitalCamerasNavNode
-;;FilmCamerasBarComponent;FilmCamerasNavNode
-;;CameraAccessoriesBarComponent;CameraAccessoriesNavNode;AUTO
-;;PowerSuppliesBarComponent;PowerSuppliesNavNode
-;;FlashMemoryBarComponent;FlashMemoryNavNode
-;;HandheldCamcordersBarComponent;HandheldCamcordersNavNode
+;;KidsBarComponent;KidsNavNode
+;;WomensBarComponent;WomensNavNode
+;;MensBarComponent;MensNavNode
+;;Home&KitchenBarComponent;Home&KitchenNavNode
+;;EmployeeBarComponent;EmployeeNavNode
+;;StudentsBarComponent;StudentsNavNode
+;;Sports&FitnessBarComponent;Sports&FitnessNavNode
+;;Books&MediaBarComponent;Books&MediaNavNode
+
+#This is chandrashekar Modification End
 
 INSERT_UPDATE NavigationBarComponent;$contentCV[unique=true];uid[unique=true];name;wrapAfter;navigationNode(&nodeRef);link(uid, $contentCV);styleClass;dropDownLayout(code);&componentRef
-;;BrandsBarComponent;All Brands;10;BrandsNavNode;AllBrandsCategoryLink;;AUTO;BrandsBarComponent
+
 
 # Update CMS Footer Component with Nav Nodes
 INSERT_UPDATE FooterComponent;$contentCV[unique=true];uid[unique=true];navigationNodes(&nodeRef)
@@ -375,14 +411,12 @@ INSERT_UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];nam
 ;;NextDayDeliveryBanner;Next Day Delivery Banner;NextDayDeliveryBanner
 
 INSERT_UPDATE BannerComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef;urlLink
-;;CanonPowershotBannerComponent;Canon Powershot A480 Thumbnail Detail;CanonPowershotBannerComponent;/Open-Catalogue/Cameras/Digital-Cameras/Digital-Compacts/PowerShot-A480/p/1934793
-;;SonyCybershotBannerComponent;Sony Cybershot DSC-S930 Thumbnail Detail;SonyCybershotBannerComponent;/Open-Catalogue/Cameras/Digital-Cameras/Digital-Compacts/DSC-S930/p/1992695
-;;KodakEasyshareBannerComponent;Kodak Easyshare V1253 Thumbnail Detail;KodakEasyshareBannerComponent;/Open-Catalogue/Cameras/Digital-Cameras/Digital-Compacts/EASYSHARE-V1253%2C-Black/p/1320808
-;;SonyDSCBannerComponent;Sony DSC-H20 Thumbnail Detail;SonyDSCBannerComponent;/Open-Catalogue/Cameras/Digital-Cameras/Digital-Compacts/DSC-H20/p/1978440
+#;;CanonPowershotBannerComponent;Canon Powershot A480 Thumbnail Detail;CanonPowershotBannerComponent;/Open-Catalogue/Cameras/Digital-Cameras/Digital-Compacts/PowerShot-A480/p/1934793
+#;;SonyCybershotBannerComponent;Sony Cybershot DSC-S930 Thumbnail Detail;SonyCybershotBannerComponent;/Open-Catalogue/Cameras/Digital-Cameras/Digital-Compacts/DSC-S930/p/1992695
+#;;KodakEasyshareBannerComponent;Kodak Easyshare V1253 Thumbnail Detail;KodakEasyshareBannerComponent;/Open-Catalogue/Cameras/Digital-Cameras/Digital-Compacts/EASYSHARE-V1253%2C-Black/p/1320808
+#;;SonyDSCBannerComponent;Sony DSC-H20 Thumbnail Detail;SonyDSCBannerComponent;/Open-Catalogue/Cameras/Digital-Cameras/Digital-Compacts/DSC-H20/p/1978440
+-;;TripodComponent;tripod details;TripodComponent;/Open-Catalogue/Cameras/Camera-Accessories-%26-Supplies/Tripods/Flagship-tripod-with-remote-control-and-pan-handle/p/23355
 ;;DigitalCompactCamerasBannerComponent;Digital Compact Cameras Small Detail;DigitalCompactCamerasBannerComponent;/Open-Catalogue/Cameras/Digital-Cameras/Digital-Compacts/c/576
-
-;;TripodComponent;tripod details;TripodComponent;/Open-Catalogue/Cameras/Camera-Accessories-%26-Supplies/Tripods/Flagship-tripod-with-remote-control-and-pan-handle/p/23355
-
 ;;DigitalSLRCamerasBannerComponent;Digital SLR Cameras Small Detail;DigitalSLRCamerasBannerComponent;/Open-Catalogue/Cameras/Digital-Cameras/Digital-SLR/c/578
 ;;MemoryBannerComponent;Camera and Camcorder Memory Small Detail;MemoryBannerComponent;/Open-Catalogue/Data-storage/Flash-Memory/c/902
 ;;AccessoriesBannerComponent;Camera Accessories and Supplies Small Detail;AccessoriesBannerComponent;/Open-Catalogue/Cameras/Camera-Accessories-%26-Supplies/c/585
@@ -398,7 +432,7 @@ INSERT_UPDATE ProductCarouselComponent;$contentCV[unique=true];uid[unique=true];
 
 INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;cmsComponents(&componentRef)
 ;;Section1Slot-Homepage;Section1 Slot for Homepage;true;BrandsGaloreBanner
-;;Section2ASlot-Homepage;Section2A Slot for Homepage;true;TripodComponent
+;;Section2ASlot-Homepage;Section2A Slot for Homepage;true;CanonPowershotBannerComponent,SonyCybershotBannerComponent,KodakEasyshareBannerComponent,SonyDSCBannerComponent
 ;;Section2BSlot-Homepage;Section2B Slot for Homepage;true;CamcordersBanner,LensesBanner
 ;;Section2CSlot-Homepage;Section2C Slot for Homepage;true;ElectronicsHomepageCarouselComponent
 ;;Section3Slot-Homepage;Section3 Slot for Homepage;true;ElectronicsHomepageProductCarouselComponent,PurchasedCategorySuggestions
@@ -414,6 +448,7 @@ INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];positi
 ;;Section4-Homepage;Section4;;Section4Slot-Homepage
 ;;Section5-Homepage;Section5;;Section5Slot-Homepage
 
+
 ###### Electronics Camera Accessories and Supplies Category Landing Page ######
 
 INSERT_UPDATE CategoryPage;$contentCV[unique=true];uid[unique=true];name;masterTemplate(uid,$contentCV);defaultPage;approvalStatus(code)[default='approved'];previewImage(code, $contentCV)
@@ -423,19 +458,16 @@ INSERT_UPDATE CMSCategoryRestriction;$contentCV[unique=true];uid[unique=true];na
 ;;CamerasAccessoriesAndSupplies-LandingPageRestriction;Restriction for Cameras Accessories And Supplies;585;CamerasAccessoriesAndSuppliesCategoryPage
 
 INSERT_UPDATE CategoryFeatureComponent;$contentCV[unique=true];uid[unique=true];name;category(code, $productCV);&componentRef
-;;CameraFlashesFeatureComponent;CameraFlashesFeatureComponent;586;CameraFlashesFeatureComponent
-;;TripodFeatureComponent;TripodFeatureComponent;587;TripodFeatureComponent
-;;CameraLensesFeatureComponent;CameraLensesFeatureComponent;588;CameraLensesFeatureComponent
-;;ColourFilmsFeatureComponent;ColourFilmsFeatureComponent;597;ColourFilmsFeatureComponent
-;;BlackAndWhiteFilmsFeatureComponent;BlackAndWhiteFilmsFeatureComponent;598;BlackAndWhiteFilmsFeatureComponent
-;;BlankVideoTapesFeatureComponent;BlankVideoTapesFeatureComponent;604;BlankVideoTapesFeatureComponent
+
 
 INSERT_UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef
 ;;BuyOnlineBanner;Buy Online Banner;BuyOnlineBanner
 
+#This is chandrashekar Modification Start
 INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;cmsComponents(&componentRef)
 ;;Section2Slot-CameraAccessories;Section2 Slot for Camera Accessories Page;true;BuyOnlineBanner
-;;Section3Slot-CameraAccessories;Section3 Slot for Camera Accessories Page;true;CameraFlashesFeatureComponent,TripodFeatureComponent,CameraLensesFeatureComponent,ColourFilmsFeatureComponent,BlackAndWhiteFilmsFeatureComponent,BlankVideoTapesFeatureComponent
+#;;Section3Slot-CameraAccessories;Section3 Slot for Camera Accessories Page;true;CameraFlashesFeatureComponent,TripodFeatureComponent,CameraLensesFeatureComponent,ColourFilmsFeatureComponent,BlackAndWhiteFilmsFeatureComponent,BlankVideoTapesFeatureComponent
+#This is chandrashekar Modification End
 
 INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];position[unique=true];page(uid,$contentCV)[unique=true][default='CamerasAccessoriesAndSuppliesCategoryPage'];contentSlot(uid,$contentCV)[unique=true]
 ;;Section2-CameraAccessories;Section2;;Section2Slot-CameraAccessories
