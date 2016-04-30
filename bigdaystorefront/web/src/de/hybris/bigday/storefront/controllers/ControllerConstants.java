@@ -146,6 +146,12 @@ public interface ControllerConstants
 			{
 				String WriteReview = "pages/product/writeReview";
 			}
+
+			interface Store
+			{
+				String StoreRegisterPage = "pages/store/storeRegisterPage";
+				String StoreRegisterSuccessPage = "pages/store/storeRegisterSuccess";
+			}
 		}
 
 		interface Fragments

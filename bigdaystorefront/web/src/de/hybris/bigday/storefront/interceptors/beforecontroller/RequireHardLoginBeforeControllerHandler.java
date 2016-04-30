@@ -9,16 +9,16 @@
  * Information and shall use it only in accordance with the terms of the
  * license agreement you entered into with hybris.
  *
- *  
+ *
  */
 package de.hybris.bigday.storefront.interceptors.beforecontroller;
 
+import de.hybris.bigday.storefront.interceptors.BeforeControllerHandler;
 import de.hybris.platform.acceleratorstorefrontcommons.annotations.RequireHardLogIn;
 import de.hybris.platform.acceleratorstorefrontcommons.constants.WebConstants;
 import de.hybris.platform.order.CartService;
 import de.hybris.platform.servicelayer.session.SessionService;
 import de.hybris.platform.servicelayer.user.UserService;
-import de.hybris.bigday.storefront.interceptors.BeforeControllerHandler;
 
 import java.lang.annotation.Annotation;
 
@@ -132,6 +132,7 @@ public class RequireHardLoginBeforeControllerHandler implements BeforeController
 	public boolean beforeController(final HttpServletRequest request, final HttpServletResponse response,
 			final HandlerMethod handler) throws Exception
 	{
+		System.out.println("RequireHardLoginBeforeControllerHandler is executed************");
 		// We only care if the request is secure
 		if (request.isSecure())
 		{
@@ -142,8 +143,8 @@ public class RequireHardLoginBeforeControllerHandler implements BeforeController
 				final String guid = (String) request.getSession().getAttribute(SECURE_GUID_SESSION_KEY);
 				boolean redirect = true;
 
-				if (((!getUserService().isAnonymousUser(getUserService().getCurrentUser()) || checkForAnonymousCheckout()) &&
-						checkForGUIDCookie(request, response, guid)))
+				if (((!getUserService().isAnonymousUser(getUserService().getCurrentUser()) || checkForAnonymousCheckout())
+						&& checkForGUIDCookie(request, response, guid)))
 				{
 					redirect = false;
 				}
@@ -193,9 +194,9 @@ public class RequireHardLoginBeforeControllerHandler implements BeforeController
 
 	protected boolean checkForAnonymousCheckout()
 	{
-		if(Boolean.TRUE.equals(getSessionService().getAttribute(WebConstants.ANONYMOUS_CHECKOUT)))
+		if (Boolean.TRUE.equals(getSessionService().getAttribute(WebConstants.ANONYMOUS_CHECKOUT)))
 		{
-			if(getSessionService().getAttribute(WebConstants.ANONYMOUS_CHECKOUT_GUID) == null)
+			if (getSessionService().getAttribute(WebConstants.ANONYMOUS_CHECKOUT_GUID) == null)
 			{
 				getSessionService().setAttribute(WebConstants.ANONYMOUS_CHECKOUT_GUID,
 						StringUtils.substringBefore(getCartService().getSessionCart().getUser().getUid(), "|"));

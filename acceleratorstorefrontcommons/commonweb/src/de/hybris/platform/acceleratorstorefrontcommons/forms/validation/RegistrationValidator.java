@@ -42,7 +42,7 @@ public class RegistrationValidator implements Validator
 	public void validate(final Object object, final Errors errors)
 	{
 		final RegisterForm registerForm = (RegisterForm) object;
-		final String titleCode = registerForm.getTitleCode();
+		//final String titleCode = registerForm.getTitleCode();
 		final String firstName = registerForm.getFirstName();
 		final String lastName = registerForm.getLastName();
 		final String email = registerForm.getEmail();
@@ -66,10 +66,9 @@ public class RegistrationValidator implements Validator
 		}
 
 
-		if (StringUtils.isEmpty(titleCode))
-		{
-			errors.rejectValue("titleCode", "register.title.invalid");
-		}
+		/*
+		 * if (StringUtils.isEmpty(titleCode)) { errors.rejectValue("titleCode", "register.title.invalid"); }
+		 */
 
 
 		if (StringUtils.isBlank(firstName))

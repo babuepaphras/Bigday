@@ -21,8 +21,8 @@
 	<h3 style="color: #66ccff" >Here You give your offers</h3>
 	
 		<br><br>
-		
-			<table border="2" bgcolor="white">
+		<div id="msg" class="msg" hidden="true"><font size="20" color="green">Post Added Successfully</font></div>
+			<table  border="2" bgcolor="white">
 			<tr>
 					<td>Type of Add	</td>
 					
@@ -55,11 +55,11 @@
 				</tr> 
 				 <tr>
 					<td>Description	</td>
-					<td><input type="text" name="description" size="17"></td>
+					<td><input type="text" name="description" size="17" ></td>
 				</tr> 
 				<tr>
 					<td>Valid Till	</td>
-					<td><input type="text" name="valid" size="17"></td>
+					<td><input type="text" name="valid"   size="17" ></td>
 				</tr>
 				<tr>
 					<td>Phone number	</td>
@@ -70,7 +70,7 @@
 			
 			<h4 style="color: blue" >By clicking 'submit' you Accept <a href="terms">Terms & conditions</a></h4>
 		
-					<input type="submit" value="Submit" >
+					<input type="submit" value="Submit">
 					</center>
 				
 	</form:form>

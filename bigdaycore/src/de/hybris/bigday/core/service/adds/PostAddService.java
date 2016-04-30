@@ -3,8 +3,8 @@
  */
 package de.hybris.bigday.core.service.adds;
 
-import de.hybris.bigday.core.model.PostaddModel;
 import de.hybris.platform.commercefacades.user.data.PostAddData;
+import de.hybris.platform.core.model.product.ProductModel;
 
 import java.util.List;
 
@@ -17,5 +17,5 @@ public interface PostAddService
 {
 	public void insertAdd(final PostAddData data);
 
-	public List<PostaddModel> selectAdd();
+	public List<ProductModel> selectAdd();
 }

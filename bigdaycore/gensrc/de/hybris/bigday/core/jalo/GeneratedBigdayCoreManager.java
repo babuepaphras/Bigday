@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at Mar 28, 2016 4:56:55 PM                     ---
+ * --- Generated at Apr 30, 2016 5:40:37 PM                     ---
  * ----------------------------------------------------------------
  *  
  * [y] hybris Platform
@@ -23,19 +23,21 @@ import de.hybris.bigday.core.jalo.ApparelSizeVariantProduct;
 import de.hybris.bigday.core.jalo.ApparelStyleVariantProduct;
 import de.hybris.bigday.core.jalo.ElectronicsColorVariantProduct;
 import de.hybris.bigday.core.jalo.GetACall;
-import de.hybris.bigday.core.jalo.Postadd;
 import de.hybris.bigday.core.jalo.Store;
+import de.hybris.platform.jalo.GenericItem;
 import de.hybris.platform.jalo.Item;
 import de.hybris.platform.jalo.Item.AttributeMode;
 import de.hybris.platform.jalo.JaloBusinessException;
 import de.hybris.platform.jalo.JaloSystemException;
 import de.hybris.platform.jalo.SessionContext;
 import de.hybris.platform.jalo.extension.Extension;
+import de.hybris.platform.jalo.product.Product;
 import de.hybris.platform.jalo.security.Principal;
 import de.hybris.platform.jalo.type.ComposedType;
 import de.hybris.platform.jalo.type.JaloGenericCreationException;
 import de.hybris.platform.jalo.user.User;
 import java.util.Collections;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -50,6 +52,12 @@ public abstract class GeneratedBigdayCoreManager extends Extension
 	{
 		final Map<String, Map<String, AttributeMode>> ttmp = new HashMap();
 		Map<String, AttributeMode> tmp = new HashMap<String, AttributeMode>();
+		tmp.put("title", AttributeMode.INITIAL);
+		tmp.put("category", AttributeMode.INITIAL);
+		tmp.put("valid", AttributeMode.INITIAL);
+		tmp.put("phno", AttributeMode.INITIAL);
+		ttmp.put("de.hybris.platform.jalo.product.Product", Collections.unmodifiableMap(tmp));
+		tmp = new HashMap<String, AttributeMode>();
 		tmp.put("mobileNumber", AttributeMode.INITIAL);
 		tmp.put("gender", AttributeMode.INITIAL);
 		ttmp.put("de.hybris.platform.jalo.user.User", Collections.unmodifiableMap(tmp));
@@ -65,6 +73,42 @@ public abstract class GeneratedBigdayCoreManager extends Extension
 			ret.putAll(attr);
 		}
 		return ret;
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Product.category</code> attribute.
+	 * @return the category
+	 */
+	public String getCategory(final SessionContext ctx, final Product item)
+	{
+		return (String)item.getProperty( ctx, BigdayCoreConstants.Attributes.Product.CATEGORY);
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Product.category</code> attribute.
+	 * @return the category
+	 */
+	public String getCategory(final Product item)
+	{
+		return getCategory( getSession().getSessionContext(), item );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Product.category</code> attribute. 
+	 * @param value the category
+	 */
+	public void setCategory(final SessionContext ctx, final Product item, final String value)
+	{
+		item.setProperty(ctx, BigdayCoreConstants.Attributes.Product.CATEGORY,value);
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Product.category</code> attribute. 
+	 * @param value the category
+	 */
+	public void setCategory(final Product item, final String value)
+	{
+		setCategory( getSession().getSessionContext(), item, value );
 	}
 	
 	public ApparelProduct createApparelProduct(final SessionContext ctx, final Map attributeValues)
@@ -197,32 +241,6 @@ public abstract class GeneratedBigdayCoreManager extends Extension
 		return createGetACall( getSession().getSessionContext(), attributeValues );
 	}
 	
-	public Postadd createPostadd(final SessionContext ctx, final Map attributeValues)
-	{
-		try
-		{
-			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType( BigdayCoreConstants.TC.POSTADD );
-			return (Postadd)type.newInstance( ctx, attributeValues );
-		}
-		catch( JaloGenericCreationException e)
-		{
-			final Throwable cause = e.getCause();
-			throw (cause instanceof RuntimeException ?
-			(RuntimeException)cause
-			:
-			new JaloSystemException( cause, cause.getMessage(), e.getErrorCode() ) );
-		}
-		catch( JaloBusinessException e )
-		{
-			throw new JaloSystemException( e ,"error creating postadd : "+e.getMessage(), 0 );
-		}
-	}
-	
-	public Postadd createPostadd(final Map attributeValues)
-	{
-		return createPostadd( getSession().getSessionContext(), attributeValues );
-	}
-	
 	public Store createStore(final SessionContext ctx, final Map attributeValues)
 	{
 		try
@@ -325,6 +343,114 @@ public abstract class GeneratedBigdayCoreManager extends Extension
 	public void setMobileNumber(final User item, final String value)
 	{
 		setMobileNumber( getSession().getSessionContext(), item, value );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Product.phno</code> attribute.
+	 * @return the phno
+	 */
+	public String getPhno(final SessionContext ctx, final Product item)
+	{
+		return (String)item.getProperty( ctx, BigdayCoreConstants.Attributes.Product.PHNO);
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Product.phno</code> attribute.
+	 * @return the phno
+	 */
+	public String getPhno(final Product item)
+	{
+		return getPhno( getSession().getSessionContext(), item );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Product.phno</code> attribute. 
+	 * @param value the phno
+	 */
+	public void setPhno(final SessionContext ctx, final Product item, final String value)
+	{
+		item.setProperty(ctx, BigdayCoreConstants.Attributes.Product.PHNO,value);
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Product.phno</code> attribute. 
+	 * @param value the phno
+	 */
+	public void setPhno(final Product item, final String value)
+	{
+		setPhno( getSession().getSessionContext(), item, value );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Product.title</code> attribute.
+	 * @return the title
+	 */
+	public String getTitle(final SessionContext ctx, final Product item)
+	{
+		return (String)item.getProperty( ctx, BigdayCoreConstants.Attributes.Product.TITLE);
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Product.title</code> attribute.
+	 * @return the title
+	 */
+	public String getTitle(final Product item)
+	{
+		return getTitle( getSession().getSessionContext(), item );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Product.title</code> attribute. 
+	 * @param value the title
+	 */
+	public void setTitle(final SessionContext ctx, final Product item, final String value)
+	{
+		item.setProperty(ctx, BigdayCoreConstants.Attributes.Product.TITLE,value);
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Product.title</code> attribute. 
+	 * @param value the title
+	 */
+	public void setTitle(final Product item, final String value)
+	{
+		setTitle( getSession().getSessionContext(), item, value );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Product.valid</code> attribute.
+	 * @return the valid
+	 */
+	public Date getValid(final SessionContext ctx, final Product item)
+	{
+		return (Date)item.getProperty( ctx, BigdayCoreConstants.Attributes.Product.VALID);
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Product.valid</code> attribute.
+	 * @return the valid
+	 */
+	public Date getValid(final Product item)
+	{
+		return getValid( getSession().getSessionContext(), item );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Product.valid</code> attribute. 
+	 * @param value the valid
+	 */
+	public void setValid(final SessionContext ctx, final Product item, final Date value)
+	{
+		item.setProperty(ctx, BigdayCoreConstants.Attributes.Product.VALID,value);
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Product.valid</code> attribute. 
+	 * @param value the valid
+	 */
+	public void setValid(final Product item, final Date value)
+	{
+		setValid( getSession().getSessionContext(), item, value );
 	}
 	
 }

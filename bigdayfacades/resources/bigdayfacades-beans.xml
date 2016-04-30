@@ -25,8 +25,16 @@
 		<property name="adtitle" type="String"/>
 		<property name="catgory" type="String"/>
 		<property name="description" type="String"/>
-		<property name="valid" type="String"/>
-		<property name="phno" type="Integer"/>
+		<!-- gopi modified start-->
+		<property name="valid" type="java.util.Date"/>
+		<!-- gopi modified end-->
+		<property name="phno" type="String"/>
+	</bean>
+	
+	<bean class="de.hybris.platform.commercefacades.user.data.StoreRegisterData">
+		<property name="storename" type="String"/>
+		<property name="phno" type="Double"/>
+		<property name="email" type="String"/>
 	</bean>
 	
 </beans>

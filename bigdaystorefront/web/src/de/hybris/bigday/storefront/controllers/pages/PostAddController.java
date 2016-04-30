@@ -1,6 +1,4 @@
-/**
- *
- */
+
 package de.hybris.bigday.storefront.controllers.pages;
 
 import de.hybris.bigday.facades.adds.AddPostFacade;
@@ -9,6 +7,8 @@ import de.hybris.platform.acceleratorstorefrontcommons.controllers.pages.Abstrac
 import de.hybris.platform.acceleratorstorefrontcommons.forms.PostAddForm;
 import de.hybris.platform.cms2.exceptions.CMSItemNotFoundException;
 import de.hybris.platform.commercefacades.user.data.PostAddData;
+
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -73,8 +73,11 @@ public class PostAddController extends AbstractPageController
 			throws CMSItemNotFoundException
 	{
 		System.out.println("insertAdd()...........");
+
+		System.out.println(form.getPhno() + " " + form.getValid() + " " + form.getAdtitle() + " " + form.getCatgory());
 		if (bindingResult.hasErrors())
 		{
+			System.out.println("bindingResult");
 			return ControllerConstants.Views.Pages.Add.PostAddPage;
 		}
 		else
@@ -88,8 +91,8 @@ public class PostAddController extends AbstractPageController
 			final String title = form.getAdtitle();
 			final String category = form.getCatgory();
 			final String description = form.getDescription();
-			final String valid = form.getValid();
-			final Integer phno = form.getPhno();
+			final Date valid = form.getValid();
+			final String phno = form.getPhno();
 
 
 			/*

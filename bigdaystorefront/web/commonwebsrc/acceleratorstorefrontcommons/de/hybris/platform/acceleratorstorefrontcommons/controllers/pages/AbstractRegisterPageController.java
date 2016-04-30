@@ -141,16 +141,26 @@ public abstract class AbstractRegisterPageController extends AbstractPageControl
 		final RegisterData data = new RegisterData();
 		data.setFirstName(form.getFirstName());
 		data.setLastName(form.getLastName());
-		data.setLogin(form.getEmail());
-		data.setMobileNumber(form.getMobileNumber());
+
+		/*
+		 * data.setLogin(form.getEmail()); data.setMobileNumber(form.getMobileNumber());
+		 */
+		/* Changes---Start */
+		data.setLogin(form.getMobileNumber());
+		data.setMobileNumber(form.getEmail());
+		System.out.println(
+				data.getLogin() + " mobile number and email id" + data.getMobileNumber() + "  abstractregisterpagecontroller");
+		/* Changes--end */
 		data.setGender(form.getGender());
 		data.setPassword(form.getPwd());
-		data.setTitleCode(form.getTitleCode());
+		//data.setTitleCode(form.getTitleCode());
 		try
 		{
 			getCustomerFacade().register(data);
-			getAutoLoginStrategy().login(form.getEmail().toLowerCase(), form.getPwd(), request, response);
-
+			/* getAutoLoginStrategy().login(form.getEmail().toLowerCase(), form.getPwd(), request, response); */
+			/* Change */
+			getAutoLoginStrategy().login(form.getMobileNumber().toLowerCase(), form.getPwd(), request, response);
+			/* change */
 			GlobalMessages.addFlashMessage(redirectModel, GlobalMessages.CONF_MESSAGES_HOLDER,
 					"registration.confirmation.message.title");
 		}

@@ -3,16 +3,13 @@
  */
 package de.hybris.bigday.core.dao.adds;
 
-import de.hybris.bigday.core.model.PostaddModel;
+import de.hybris.platform.core.model.product.ProductModel;
 
 import java.util.List;
 
 
-/**
- * @author Chinni
- *
- */
+
 public interface PostAddDao
 {
-	List<PostaddModel> selectAdd();
+	List<ProductModel> selectAdd();
 }

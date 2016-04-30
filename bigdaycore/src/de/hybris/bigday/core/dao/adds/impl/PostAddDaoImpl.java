@@ -4,7 +4,7 @@
 package de.hybris.bigday.core.dao.adds.impl;
 
 import de.hybris.bigday.core.dao.adds.PostAddDao;
-import de.hybris.bigday.core.model.PostaddModel;
+import de.hybris.platform.core.model.product.ProductModel;
 import de.hybris.platform.servicelayer.search.FlexibleSearchService;
 import de.hybris.platform.servicelayer.search.SearchResult;
 
@@ -31,12 +31,12 @@ public class PostAddDaoImpl implements PostAddDao
 
 
 	@Override
-	public List<PostaddModel> selectAdd()
+	public List<ProductModel> selectAdd()
 	{
 		final String query = "select {title},{category},{description},{valid},{phno} from {postadd}";
 		// Flexible search service injected by Spring
 
-		final SearchResult<PostaddModel> searchResult = flexiblesearchservice.search(query);
+		final SearchResult<ProductModel> searchResult = flexiblesearchservice.search(query);
 		final List result = searchResult.getResult();
 
 

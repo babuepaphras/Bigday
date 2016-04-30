@@ -21,6 +21,8 @@
 	<bean id="addPostFacadeImpl" class="de.hybris.bigday.facades.adds.impl.AddPostFacadeImpl">
 	<property name="postaddservice" ref="postaddservice" />
 	</bean>
+	<bean id="storeRegisterFacade" class="de.hybris.bigday.facades.store.StoreRegisterFacadeImpl" />
+	
 	
 		<alias alias="callFacade" name="defaultCallFacade"/>
 		<bean id="defaultCallFacade"    class="de.hybris.bigday.facades.calls.impl.DefaultCallFacade">

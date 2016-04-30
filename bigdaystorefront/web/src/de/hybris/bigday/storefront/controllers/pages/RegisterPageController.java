@@ -9,15 +9,15 @@
  * Information and shall use it only in accordance with the terms of the
  * license agreement you entered into with hybris.
  *
- *  
+ *
  */
 package de.hybris.bigday.storefront.controllers.pages;
 
+import de.hybris.bigday.storefront.controllers.ControllerConstants;
 import de.hybris.platform.acceleratorstorefrontcommons.controllers.pages.AbstractRegisterPageController;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.RegisterForm;
 import de.hybris.platform.cms2.exceptions.CMSItemNotFoundException;
 import de.hybris.platform.cms2.model.pages.AbstractPageModel;
-import de.hybris.bigday.storefront.controllers.ControllerConstants;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -46,12 +46,14 @@ public class RegisterPageController extends AbstractRegisterPageController
 	@Override
 	protected AbstractPageModel getCmsPage() throws CMSItemNotFoundException
 	{
+		System.out.println("RegisterPageController is executed getcmspage********");
 		return getContentPageForLabelOrId("register");
 	}
 
 	@Override
 	protected String getSuccessRedirect(final HttpServletRequest request, final HttpServletResponse response)
 	{
+		System.out.println("RegisterPageController is executed getSuccessRedirect********");
 		if (httpSessionRequestCache.getRequest(request, response) != null)
 		{
 			return httpSessionRequestCache.getRequest(request, response).getRedirectUrl();
@@ -62,6 +64,7 @@ public class RegisterPageController extends AbstractRegisterPageController
 	@Override
 	protected String getView()
 	{
+		System.out.println("RegisterPageController is executed getview********");
 		return ControllerConstants.Views.Pages.Account.AccountRegisterPage;
 	}
 
@@ -74,6 +77,7 @@ public class RegisterPageController extends AbstractRegisterPageController
 	@RequestMapping(method = RequestMethod.GET)
 	public String doRegister(final Model model, final HttpServletRequest request) throws CMSItemNotFoundException
 	{
+		System.out.println("RegisterPageController is executed doRegister get method********");
 		return getDefaultRegistrationPage(model);
 	}
 
@@ -82,6 +86,7 @@ public class RegisterPageController extends AbstractRegisterPageController
 			final HttpServletRequest request, final HttpServletResponse response, final RedirectAttributes redirectModel)
 			throws CMSItemNotFoundException
 	{
+		System.out.println("RegisterPageController is executed doRegister/newcustomer********");
 		getRegistrationValidator().validate(form, bindingResult);
 		return processRegisterUserRequest(null, form, bindingResult, model, request, response, redirectModel);
 	}

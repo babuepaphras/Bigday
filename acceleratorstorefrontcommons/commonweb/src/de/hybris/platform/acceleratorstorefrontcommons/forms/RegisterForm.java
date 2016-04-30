@@ -19,7 +19,7 @@ package de.hybris.platform.acceleratorstorefrontcommons.forms;
 public class RegisterForm
 {
 
-	private String titleCode;
+	/* private String titleCode; */
 	private String firstName;
 	private String lastName;
 	private String email;
@@ -49,19 +49,15 @@ public class RegisterForm
 	/**
 	 * @return the titleCode
 	 */
-	public String getTitleCode()
-	{
-		return titleCode;
-	}
-
-	/**
-	 * @param titleCode
-	 *           the titleCode to set
-	 */
-	public void setTitleCode(final String titleCode)
-	{
-		this.titleCode = titleCode;
-	}
+	/*
+	 * public String getTitleCode() { return titleCode; }
+	 * 
+	 *//**
+	   * @param titleCode
+	   *           the titleCode to set
+	   *//*
+		  * public void setTitleCode(final String titleCode) { this.titleCode = titleCode; }
+		  */
 
 	/**
 	 * @return the firstName

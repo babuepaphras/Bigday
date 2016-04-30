@@ -3,6 +3,9 @@
  */
 package de.hybris.platform.acceleratorstorefrontcommons.forms;
 
+import java.util.Date;
+
+
 /**
  * @author admin
  *
@@ -16,11 +19,8 @@ public class PostAddForm
 	private String adtitle;
 	private String description;
 	private String catgory;
-	private String valid;
-	private Integer phno;
-
-
-
+	private Date valid;
+	private String phno;
 
 	/**
 	 * @return the code
@@ -38,7 +38,6 @@ public class PostAddForm
 	{
 		this.code = code;
 	}
-
 
 	/**
 	 * @return the typeofadd
@@ -111,7 +110,7 @@ public class PostAddForm
 	/**
 	 * @return the valid
 	 */
-	public String getValid()
+	public Date getValid()
 	{
 		return valid;
 	}
@@ -120,7 +119,7 @@ public class PostAddForm
 	 * @param valid
 	 *           the valid to set
 	 */
-	public void setValid(final String valid)
+	public void setValid(final Date valid)
 	{
 		this.valid = valid;
 	}
@@ -128,7 +127,7 @@ public class PostAddForm
 	/**
 	 * @return the phno
 	 */
-	public Integer getPhno()
+	public String getPhno()
 	{
 		return phno;
 	}
@@ -137,9 +136,10 @@ public class PostAddForm
 	 * @param phno
 	 *           the phno to set
 	 */
-	public void setPhno(final Integer phno)
+	public void setPhno(final String phno)
 	{
 		this.phno = phno;
 	}
+
 
 }

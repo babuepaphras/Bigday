@@ -47,16 +47,6 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 	
 	
 		createItemType(
-			"postadd",
-			"GenericItem",
-			de.hybris.bigday.core.jalo.Postadd.class,
-			"de.hybris.platform.persistence.bigdaycore_postadd",
-			false,
-			null,
-			false
-		);
-	
-		createItemType(
 			"GetACall",
 			"Customer",
 			de.hybris.bigday.core.jalo.GetACall.class,
@@ -146,15 +136,13 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 
 	
 	
-				single_createattr_postadd_title();
+				single_createattr_product_title();
 			
-				single_createattr_postadd_category();
+				single_createattr_product_category();
 			
-				single_createattr_postadd_description();
+				single_createattr_product_valid();
 			
-				single_createattr_postadd_valid();
-			
-				single_createattr_postadd_phno();
+				single_createattr_product_phno();
 			
 				single_createattr_GetACall_username();
 			
@@ -186,13 +174,13 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 	}
 
 	
-	public void single_createattr_postadd_title() throws JaloBusinessException
+	public void single_createattr_product_title() throws JaloBusinessException
 	{
 		
 						Map sqlColumnDefinitions = null;
 					
 				createPropertyAttribute(
-					"postadd", 
+					"product", 
 					"title",  
 					"Title",
 					"java.lang.String",
@@ -203,68 +191,51 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			
 	}
 	
-	public void single_createattr_postadd_category() throws JaloBusinessException
+	public void single_createattr_product_category() throws JaloBusinessException
 	{
 		
 						Map sqlColumnDefinitions = null;
 					
 				createPropertyAttribute(
-					"postadd", 
+					"product", 
 					"category",  
 					"Category",
 					"java.lang.String",
-					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
+					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
 					null,
 					sqlColumnDefinitions
 				);
 			
 	}
 	
-	public void single_createattr_postadd_description() throws JaloBusinessException
+	public void single_createattr_product_valid() throws JaloBusinessException
 	{
 		
 						Map sqlColumnDefinitions = null;
 					
 				createPropertyAttribute(
-					"postadd", 
-					"description",  
-					"Description",
-					"java.lang.String",
-					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
-					null,
-					sqlColumnDefinitions
-				);
-			
-	}
-	
-	public void single_createattr_postadd_valid() throws JaloBusinessException
-	{
-		
-						Map sqlColumnDefinitions = null;
-					
-				createPropertyAttribute(
-					"postadd", 
+					"product", 
 					"valid",  
 					"Valid",
-					"java.lang.String",
-					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
+					"java.util.Date",
+					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
 					null,
 					sqlColumnDefinitions
 				);
 			
 	}
 	
-	public void single_createattr_postadd_phno() throws JaloBusinessException
+	public void single_createattr_product_phno() throws JaloBusinessException
 	{
 		
 						Map sqlColumnDefinitions = null;
 					
 				createPropertyAttribute(
-					"postadd", 
+					"product", 
 					"phno",  
 					"Phno",
-					"java.lang.Integer",
-					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
+					"java.lang.String",
+					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
 					null,
 					sqlColumnDefinitions
 				);
@@ -526,25 +497,20 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 				{
 				Map customPropsMap = new HashMap();
 				
-				setItemTypeProperties(
-					"postadd",
-					false,
-					true,
-					true,
+				changeMetaType(
+					"product",
 					null,
 					customPropsMap
 				);
 				}
 			
-			single_setAttributeProperties_postadd_title();
+			single_setAttributeProperties_product_title();
 		
-			single_setAttributeProperties_postadd_category();
+			single_setAttributeProperties_product_category();
 		
-			single_setAttributeProperties_postadd_description();
+			single_setAttributeProperties_product_valid();
 		
-			single_setAttributeProperties_postadd_valid();
-		
-			single_setAttributeProperties_postadd_phno();
+			single_setAttributeProperties_product_phno();
 		
 				{
 				Map customPropsMap = new HashMap();
@@ -685,7 +651,7 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 
 
 		
-						public void single_setAttributeProperties_postadd_title() throws JaloBusinessException
+						public void single_setAttributeProperties_product_title() throws JaloBusinessException
 						{
 							
 							
@@ -693,7 +659,7 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 							Map customPropsMap = new HashMap();
 							
 							setAttributeProperties(
-								"postadd", 
+								"product", 
 								"title",
 								false, 
 								null,
@@ -707,7 +673,7 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 							);
 						}
 					
-						public void single_setAttributeProperties_postadd_category() throws JaloBusinessException
+						public void single_setAttributeProperties_product_category() throws JaloBusinessException
 						{
 							
 							
@@ -715,7 +681,7 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 							Map customPropsMap = new HashMap();
 							
 							setAttributeProperties(
-								"postadd", 
+								"product", 
 								"category",
 								false, 
 								null,
@@ -729,7 +695,7 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 							);
 						}
 					
-						public void single_setAttributeProperties_postadd_description() throws JaloBusinessException
+						public void single_setAttributeProperties_product_valid() throws JaloBusinessException
 						{
 							
 							
@@ -737,29 +703,7 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 							Map customPropsMap = new HashMap();
 							
 							setAttributeProperties(
-								"postadd", 
-								"description",
-								false, 
-								null,
-								null,
-								null,
-								true,
-								true,
-								null,
-								customPropsMap,
-								null
-							);
-						}
-					
-						public void single_setAttributeProperties_postadd_valid() throws JaloBusinessException
-						{
-							
-							
-							
-							Map customPropsMap = new HashMap();
-							
-							setAttributeProperties(
-								"postadd", 
+								"product", 
 								"valid",
 								false, 
 								null,
@@ -773,7 +717,7 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 							);
 						}
 					
-						public void single_setAttributeProperties_postadd_phno() throws JaloBusinessException
+						public void single_setAttributeProperties_product_phno() throws JaloBusinessException
 						{
 							
 							
@@ -781,7 +725,7 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 							Map customPropsMap = new HashMap();
 							
 							setAttributeProperties(
-								"postadd", 
+								"product", 
 								"phno",
 								false, 
 								null,

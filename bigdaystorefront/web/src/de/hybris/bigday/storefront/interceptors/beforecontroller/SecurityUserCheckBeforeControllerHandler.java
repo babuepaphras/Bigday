@@ -9,13 +9,13 @@
  * Information and shall use it only in accordance with the terms of the
  * license agreement you entered into with hybris.
  *
- *  
+ *
  */
 package de.hybris.bigday.storefront.interceptors.beforecontroller;
 
+import de.hybris.bigday.storefront.interceptors.BeforeControllerHandler;
 import de.hybris.platform.acceleratorcms.services.CMSPageContextService;
 import de.hybris.platform.servicelayer.user.UserService;
-import de.hybris.bigday.storefront.interceptors.BeforeControllerHandler;
 
 import java.io.IOException;
 
@@ -46,8 +46,10 @@ public class SecurityUserCheckBeforeControllerHandler implements BeforeControlle
 
 
 	@Override
-	public boolean beforeController(final HttpServletRequest request, final HttpServletResponse response, final HandlerMethod handler) throws IOException
+	public boolean beforeController(final HttpServletRequest request, final HttpServletResponse response,
+			final HandlerMethod handler) throws IOException
 	{
+		System.out.println("SecurityUserCheckBeforeControllerHandler************");
 		// Skip this security check when run from within the WCMS Cockpit
 		if (isPreviewDataModelValid(request))
 		{
@@ -82,7 +84,7 @@ public class SecurityUserCheckBeforeControllerHandler implements BeforeControlle
 
 	/**
 	 * Checks whether there is a preview data setup for the current request
-	 * 
+	 *
 	 * @param httpRequest
 	 *           current request
 	 * @return true whether is valid otherwise false
