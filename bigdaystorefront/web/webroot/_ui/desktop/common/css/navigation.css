@@ -1,18 +1,16 @@
+/*
+## Navigation
+********************************************************************/
+
 .navigationbarcollectioncomponent{
-	border:1px dotted #a5a5a5;
+	border:1px solid #a5a5a5;
 	border-width:1px 0 ;
-	position:relative;
+   	position:relative;
 	z-index:100;
 	clear: both;
-	background: #0F6CB2;
-  border-left:  solid #0F6CB2;
-  border-right:  solid #0F6CB2;
-/*   position: fixed; */
-  width: 100%;
-  
+	width:100%;
+	background-color: #002E6E;
 }
-
-
 
 
 /*
@@ -22,17 +20,15 @@
 .navigationbarcollectioncomponent  li.La{
 	float:left;
 	text-align:center;
-
 }
 
 
 .navigationbarcollectioncomponent  li.La > a{
-	color:white;
 	display:block;
 	line-height:2.750em;
-	padding: 0 40px;
-	
-	}
+	padding: 0 12px;
+	color:white;
+}
 
 
 .navigationbarcollectioncomponent li.La:hover{
@@ -40,11 +36,12 @@
 }
 
 .navigationbarcollectioncomponent li.parent:hover > a{ 
-	color:black;
-	background:#eee;
+
+	background:white;
 	margin:0 0 -1px 0;
 	padding-bottom:1px;
 	box-shadow: 4px 4px 4px rgba(0,0,0,0.4);
+	color:black;
 }
 
 .navigationbarcollectioncomponent li.parent:hover > a{ 
@@ -67,9 +64,10 @@
 	display:block;
 }
 
+
 .navigationbarcollectioncomponent ul.Lb{
 	position:absolute;
-	background:#eee;
+	background:white;
 	left:0;
 	right: 0;
 	text-align:left;
@@ -82,8 +80,12 @@
 	box-shadow: 4px 4px 4px rgba(0,0,0,0.4);
 	
 }
+
+
+
 .navigationbarcollectioncomponent ul.Lb li.Lb{
 	float:left;
+
 }
 
 
@@ -96,16 +98,10 @@
 }
 
 
-
-
 .navigationbarcollectioncomponent ul.Lb li.Lb .Lc{
 	float:left;
 	width:181px;
 }
-
-
-
-
 
 /*
 #### Special Offer
@@ -122,69 +118,4 @@
 .navigationbarcollectioncomponent .La.special_offer{
 	background:#eee;
 	
-}
-
-
-<!--list to grid view css styles-->
-
-
-
-    .glyphicon { margin-right:5px; }
-.thumbnail
-{
-    margin-bottom: 20px;
-    padding: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    border-radius: 0px;
-}
-
-.item.list-group-item
-{
-    float: none;
-    /* width: 40%; */
-    margin-right:50%;
-    margin-left:50%;
-    background-color: #fff;
-    margin-bottom: 10px;
-}
-.item.list-group-item:nth-of-type(odd):hover,.item.list-group-item:hover
-{
-    background: #428bca;
-}
-
-.item.list-group-item .list-group-image
-{
-    margin-right: 10px;
-}
-.item.list-group-item .thumbnail
-{
-    margin-bottom: 0px;
-}
-.item.list-group-item .caption
-{
-    padding: 9px 9px 0px 9px;
-}
-.item.list-group-item:nth-of-type(odd)
-{
-    background: #eeeeee;
-}
-
-.item.list-group-item:before, .item.list-group-item:after
-{
-    display: table;
-    content: " ";
-}
-
-.item.list-group-item img
-{
-    float: left;
-}
-.item.list-group-item:after
-{
-    clear: both;
-}
-.list-group-item-text
-{
-    margin: 0 0 11px;
 }
