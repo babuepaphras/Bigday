@@ -37,7 +37,7 @@
 				<sec:authorize ifNotGranted="ROLE_ANONYMOUS"><li><ycommerce:testId code="header_signOut"><a href="<c:url value='/logout'/>"><spring:theme code="header.link.logout"/></a></ycommerce:testId></li></sec:authorize>
 			</c:if>
 			<li><a href="<c:url value="/postadd"/>">POSTYOURADD</a></li>
-		<li><a href="<c:url value="/storeget"/>"><spring:theme code="Store" /></a></li>
+		<li><a href="<c:url value="/store/storeget"/>"><spring:theme code="Store" /></a></li>
 			<cms:pageSlot position="MiniCart" var="cart" limit="1">
 				<cms:component component="${cart}" element="li" class="miniCart" />
 			</cms:pageSlot>

@@ -30,6 +30,7 @@ INSERT_UPDATE PageTemplate;$contentCV[unique=true];uid[unique=true];name;fronten
 ;;AccountPageTemplate;Account Page Template;account/accountLayoutPage;ContentPage
 
 ;;PostAddPageTemplate;Post Add Page Template;adds/postaddtemplate;ContentPage
+#;;PostAddPageTemplate;Post Add Page Template;store/storeRegisterPage;ContentPage
 
 # Templates without a frontendTemplateName
 ;;CartPageTemplate;Cart Page Template;;ContentPage;false;
@@ -832,6 +833,7 @@ INSERT_UPDATE ContentPage;$contentCV[unique=true];uid[unique=true];name;masterTe
 INSERT_UPDATE ContentPage;$contentCV[unique=true];uid[unique=true];name;masterTemplate(uid,$contentCV);label;defaultPage[default='true'];approvalStatus(code)[default='approved'];homepage[default='false'];previewImage(code, $contentCV)[default='ContentPageModel__function_preview']
 ;;postadd;Post Add;PostAddPageTemplate;Post Add
 ;;postsuccess;Post Success;PostAddPageTemplate;Post Success
+
 
 
 # Preview Image for use in the CMS Cockpit for special ContentPages

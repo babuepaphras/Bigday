@@ -74,7 +74,10 @@ public class StoreRegisterController extends AbstractRegisterPageController
 		 *
 		 * getStoreRegisterFacade().storeregisterdata(data);
 		 */
-
+		/*
+		 * storeCmsPageInModel(model, getContentPageForLabelOrId("postsuccess")); setUpMetaDataForContentPage(model,
+		 * getContentPageForLabelOrId("postsuccess")); System.out.println("model return"); return getViewForPage(model);
+		 */
 		return ControllerConstants.Views.Pages.Store.StoreRegisterPage;
 	}
 
@@ -111,7 +114,10 @@ public class StoreRegisterController extends AbstractRegisterPageController
 
 		getStoreRegisterFacade().storeregisterdata(data);
 
-
+		/*
+		 * storeCmsPageInModel(model, getContentPageForLabelOrId("postsuccess")); setUpMetaDataForContentPage(model,
+		 * getContentPageForLabelOrId("postsuccess")); System.out.println("model return"); return getViewForPage(model);
+		 */
 		return getSuccessRedirect(req, response);
 	}
 
@@ -134,7 +140,7 @@ public class StoreRegisterController extends AbstractRegisterPageController
 	{
 		// YTODO Auto-generated method stub
 		System.out.println("AbstractPageModel");
-		return getContentPageForLabelOrId("storeregister");
+		return getContentPageForLabelOrId("postadd");
 	}
 
 	/*

@@ -191,5 +191,17 @@
 				</attributes>
 			</itemtype>
 		</typegroup>
+		
+			<typegroup name="mail">
+			<itemtype code="CronJobMailProcess" extends="StoreFrontProcess"
+				autocreate="true" generate="true">
+				<attributes>
+					<attribute qualifier="product" type="product">
+						<description> the product type.</description>
+						<persistence type="property"/>
+					</attribute>
+				</attributes>
+			</itemtype>
+		</typegroup>
 	</itemtypes>
 </items>

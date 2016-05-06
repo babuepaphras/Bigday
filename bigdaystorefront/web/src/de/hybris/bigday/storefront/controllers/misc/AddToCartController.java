@@ -13,6 +13,8 @@
  */
 package de.hybris.bigday.storefront.controllers.misc;
 
+import de.hybris.bigday.core.event.CronJobMailEvent;
+import de.hybris.bigday.storefront.controllers.ControllerConstants;
 import de.hybris.platform.acceleratorstorefrontcommons.controllers.AbstractController;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.AddToCartForm;
 import de.hybris.platform.commercefacades.order.CartFacade;
@@ -20,7 +22,9 @@ import de.hybris.platform.commercefacades.order.data.CartModificationData;
 import de.hybris.platform.commercefacades.product.ProductFacade;
 import de.hybris.platform.commercefacades.product.ProductOption;
 import de.hybris.platform.commerceservices.order.CommerceCartModificationException;
-import de.hybris.bigday.storefront.controllers.ControllerConstants;
+import de.hybris.platform.core.model.product.ProductModel;
+import de.hybris.platform.product.ProductService;
+import de.hybris.platform.servicelayer.event.EventService;
 
 import java.util.Arrays;
 
@@ -57,9 +61,16 @@ public class AddToCartController extends AbstractController
 	@Resource(name = "accProductFacade")
 	private ProductFacade productFacade;
 
+
+	@Resource(name = "eventService")
+	private EventService eventService;
+
+	@Resource(name = "productService")
+	private ProductService productService;
+
 	@RequestMapping(value = "/cart/add", method = RequestMethod.POST, produces = "application/json")
-	public String addToCart(@RequestParam("productCodePost") final String code, final Model model,
-			@Valid final AddToCartForm form, final BindingResult bindingErrors)
+	public String addToCart(@RequestParam("productCodePost") final String code, final Model model, @Valid final AddToCartForm form,
+			final BindingResult bindingErrors)
 	{
 		if (bindingErrors.hasErrors())
 		{
@@ -78,6 +89,24 @@ public class AddToCartController extends AbstractController
 			try
 			{
 				final CartModificationData cartModification = cartFacade.addToCart(code, qty);
+
+
+				final ProductModel product = productService.getProductForCode(code);
+				System.out.println(product.getName() + " Product name in controller>>>>>>>>>");
+				try
+				{
+					System.out.println("publishing an my event>>>>>>>>>>>>>>");
+					eventService.publishEvent(new CronJobMailEvent(product));
+				}
+				catch (final Exception e)
+				{
+					System.out.println("Erroe in event publish....");
+					LOG.error("Could not publish event", e);
+				}
+
+
+
+
 				model.addAttribute("quantity", Long.valueOf(cartModification.getQuantityAdded()));
 				model.addAttribute("entry", cartModification.getEntry());
 				model.addAttribute("cartCode", cartModification.getCartCode());

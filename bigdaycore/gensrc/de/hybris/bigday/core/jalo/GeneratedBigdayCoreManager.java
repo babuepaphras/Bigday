@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at Apr 30, 2016 5:40:37 PM                     ---
+ * --- Generated at May 5, 2016 2:04:26 PM                      ---
  * ----------------------------------------------------------------
  *  
  * [y] hybris Platform
@@ -21,6 +21,7 @@ import de.hybris.bigday.core.constants.BigdayCoreConstants;
 import de.hybris.bigday.core.jalo.ApparelProduct;
 import de.hybris.bigday.core.jalo.ApparelSizeVariantProduct;
 import de.hybris.bigday.core.jalo.ApparelStyleVariantProduct;
+import de.hybris.bigday.core.jalo.CronJobMailProcess;
 import de.hybris.bigday.core.jalo.ElectronicsColorVariantProduct;
 import de.hybris.bigday.core.jalo.GetACall;
 import de.hybris.bigday.core.jalo.Store;
@@ -187,6 +188,32 @@ public abstract class GeneratedBigdayCoreManager extends Extension
 	public ApparelStyleVariantProduct createApparelStyleVariantProduct(final Map attributeValues)
 	{
 		return createApparelStyleVariantProduct( getSession().getSessionContext(), attributeValues );
+	}
+	
+	public CronJobMailProcess createCronJobMailProcess(final SessionContext ctx, final Map attributeValues)
+	{
+		try
+		{
+			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType( BigdayCoreConstants.TC.CRONJOBMAILPROCESS );
+			return (CronJobMailProcess)type.newInstance( ctx, attributeValues );
+		}
+		catch( JaloGenericCreationException e)
+		{
+			final Throwable cause = e.getCause();
+			throw (cause instanceof RuntimeException ?
+			(RuntimeException)cause
+			:
+			new JaloSystemException( cause, cause.getMessage(), e.getErrorCode() ) );
+		}
+		catch( JaloBusinessException e )
+		{
+			throw new JaloSystemException( e ,"error creating CronJobMailProcess : "+e.getMessage(), 0 );
+		}
+	}
+	
+	public CronJobMailProcess createCronJobMailProcess(final Map attributeValues)
+	{
+		return createCronJobMailProcess( getSession().getSessionContext(), attributeValues );
 	}
 	
 	public ElectronicsColorVariantProduct createElectronicsColorVariantProduct(final SessionContext ctx, final Map attributeValues)
