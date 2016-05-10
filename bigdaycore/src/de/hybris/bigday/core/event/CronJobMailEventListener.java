@@ -76,10 +76,21 @@ public class CronJobMailEventListener extends AbstractEventListener<CronJobMailE
 		 * cronJobMailProcessModel.setProduct(event.getProduct()); cronJobMailProcessModel.
 		 * getProduct().getCatalogVersion()
 		 */
+		cronJobMailProcessModel.setSite(event.getSite());
+		/*
+		 * cronJobMailProcessModel.setCustomer(event.getCustomer());
+		 * cronJobMailProcessModel.setLanguage(event.getLanguage());
+		 * cronJobMailProcessModel.setCurrency(event.getCurrency());
+		 */
+		cronJobMailProcessModel.setStore(event.getBaseStore());
 
-		System.out.println("cronJobMailProcessModel.getProductCode() before save" + cronJobMailProcessModel.getProduct());
+
+
 
 		getModelService().save(cronJobMailProcessModel);
+		System.out.println("cronJobMailProcessModel.getProductCode() before save" + cronJobMailProcessModel.getProduct());
+		//System.out.println(cronJobMailProcessModel.getStore() + " get Store from basestore. catalogs:"
+		//		+ cronJobMailProcessModel.getStore().getCatalogs());
 		System.out.println("cronJobMailProcessModel.getProductCode()=========" + cronJobMailProcessModel.getProduct());
 
 		getBusinessProcessService().startProcess(cronJobMailProcessModel);

@@ -3,20 +3,20 @@
  */
 package de.hybris.bigday.core.event;
 
+import de.hybris.platform.commerceservices.event.AbstractCommerceUserEvent;
 import de.hybris.platform.core.model.product.ProductModel;
-import de.hybris.platform.servicelayer.event.events.AbstractEvent;
 
 
 /**
  * @author Balagani
  *
  */
-public class CronJobMailEvent extends AbstractEvent
+public class CronJobMailEvent extends AbstractCommerceUserEvent
 {
 	private ProductModel product;
 
 	/**
-	 * 
+	 *
 	 */
 	public CronJobMailEvent()
 	{

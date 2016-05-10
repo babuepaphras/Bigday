@@ -44,6 +44,7 @@ public class StoreRegisterFacadeImpl implements StoreRegisterFacade
 		sm.setStoreName(data.getStorename());
 		sm.setEmail(data.getEmail());
 		sm.setPhno(data.getPhno());
+		getModelService().save(sm);
 
 	}
 

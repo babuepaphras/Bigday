@@ -32,6 +32,8 @@ INSERT_UPDATE PageTemplate;$contentCV[unique=true];uid[unique=true];name;fronten
 ;;PostAddPageTemplate;Post Add Page Template;adds/postaddtemplate;ContentPage
 #;;PostAddPageTemplate;Post Add Page Template;store/storeRegisterPage;ContentPage
 
+;;StorePageTemplate;Store Page Template;store/storerRegisterPage;ContentPage
+
 # Templates without a frontendTemplateName
 ;;CartPageTemplate;Cart Page Template;;ContentPage;false;
 ;;LoginPageTemplate;Login Page Template;;ContentPage;false;
@@ -71,6 +73,24 @@ UPDATE PageTemplate;$contentCV[unique=true];uid[unique=true];velocityTemplate[tr
 # Each PageTemplate has a number of ContentSlotNames, with a list of valid components for the slot.
 # There are a standard set of slots and a number of specific slots for each template.
 # Standard slots are SiteLogo, HeaderLinks, MiniCart and NavigationBar (that all appear in the Header), and the Footer. 
+
+
+INSERT_UPDATE ContentSlotName;name[unique=true];template(uid,$contentCV)[unique=true][default='StorePageTemplate'];validComponentTypes(code);compTypeGroup(code)
+    ;SiteLogo;;;logo
+    ;HeaderLinks;;;headerlinks
+   ;SearchBox;;;searchbox
+   ;MiniCart;;;minicart
+   ;NavigationBar;;;navigation
+   ;Section1;;;wide
+   ;Section2A;;;wide
+   ;Section2B;;;narrow
+   ;Section2C;;;narrow
+   ;Footer;;;footer
+   ;TopHeaderSlot;;;wide
+   ;BottomHeaderSlot;;;wide
+   ;PlaceholderContentSlot;;;
+
+
 
 INSERT_UPDATE ContentSlotName;name[unique=true];template(uid,$contentCV)[unique=true][default= PostAddPageTemplate];validComponentTypes(code);compTypeGroup(code)
 ;SiteLogo;;;logo
@@ -502,6 +522,24 @@ INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active
 ;;PlaceholderContentSlot;Placeholder for Addon tag files;true
 
 
+
+ INSERT_UPDATE ContentSlotForTemplate;$contentCV[unique=true];uid[unique=true];position[unique=true];pageTemplate(uid,$contentCV)[unique=true][default='StorePageTemplate'];contentSlot(uid,$contentCV)[unique=true];allowOverwrite
+   ;;SiteLogo-StorePage;SiteLogo;;SiteLogoSlot;true
+   ;;HomepageLink-StorePage;HomepageNavLink;;HomepageNavLinkSlot;true
+   ;;NavigationBar-StorePage;NavigationBar;;NavigationBarSlot;true
+   ;;MiniCart-StorePage;MiniCart;;MiniCartSlot;true
+   ;;Footer-StorePage;Footer;;FooterSlot;true
+   ;;HeaderLinks-StorePage;HeaderLinks;;HeaderLinksSlot;true
+   ;;SearchBox-StorePage;SearchBox;;SearchBoxSlot;true
+   ;;TopHeaderSlot-StorePage;TopHeaderSlot;;TopHeaderSlot;true
+   ;;BottomHeaderSlot-StorePage;BottomHeaderSlot;;BottomHeaderSlot;true
+   ;;PlaceholderContentSlot-StorePage;PlaceholderContentSlot;;PlaceholderContentSlot;true
+
+
+
+
+
+
 INSERT_UPDATE ContentSlotForTemplate;$contentCV[unique=true];uid[unique=true];position[unique=true];pageTemplate(uid,$contentCV)[unique=true][default='PostAddPageTemplate'];contentSlot(uid,$contentCV)[unique=true];allowOverwrite
 ;;SiteLogo-PostAddPage;SiteLogo;;SiteLogoSlot;true
 ;;HomepageLink- PostAddPage;HomepageNavLink;;HomepageNavLinkSlot;true
@@ -834,6 +872,9 @@ INSERT_UPDATE ContentPage;$contentCV[unique=true];uid[unique=true];name;masterTe
 ;;postadd;Post Add;PostAddPageTemplate;Post Add
 ;;postsuccess;Post Success;PostAddPageTemplate;Post Success
 
+INSERT_UPDATE ContentPage;$contentCV[unique=true];uid[unique=true];name;masterTemplate(uid,$contentCV);label;defaultPage[default='true'];approvalStatus(code)[default='approved'];homepage[default='false'];previewImage(code, $contentCV)[default='ContentPageModel__function_preview']
+;;storeregister;Store Register;StorePageTemplate;Store Register
+;;storeregistersuccess;Store Register Success;StorePageTemplate;Store Register Success
 
 
 # Preview Image for use in the CMS Cockpit for special ContentPages

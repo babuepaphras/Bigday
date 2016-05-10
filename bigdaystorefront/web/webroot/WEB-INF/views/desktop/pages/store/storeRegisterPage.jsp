@@ -5,13 +5,15 @@
 <%@ taglib prefix="cms" uri="http://hybris.com/tld/cmstags"%>
 <%@ taglib prefix="common" tagdir="/WEB-INF/tags/desktop/common"%>
 <%@ taglib prefix="nav" tagdir="/WEB-INF/tags/desktop/nav"%>
-
-<div id="globalMessages">
+<%@ taglib prefix="store" tagdir="/WEB-INF/tags/desktop/store"%>
+<template:page>
+ <div id="globalMessages">
 	<common:globalMessages />
 </div>
+<%-- <store:storeRegister/> --%>
 
 <div class="span-24" align="center">
-<form action="/storereg" method="get">
+<form action="registerstore/storereg" method="get">
 	<h2>Store Register</h2>
 		<table align="center" border="2" cellpadding="2" cellspacing="2" bgcolor="skyblue">
 			<tr>
@@ -36,3 +38,5 @@
 	
 
 </div>
+
+</template:page>
