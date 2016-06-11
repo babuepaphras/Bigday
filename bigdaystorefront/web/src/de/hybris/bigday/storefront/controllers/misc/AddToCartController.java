@@ -21,10 +21,14 @@ import de.hybris.platform.commercefacades.order.CartFacade;
 import de.hybris.platform.commercefacades.order.data.CartModificationData;
 import de.hybris.platform.commercefacades.product.ProductFacade;
 import de.hybris.platform.commercefacades.product.ProductOption;
+import de.hybris.platform.commerceservices.event.AbstractCommerceUserEvent;
 import de.hybris.platform.commerceservices.order.CommerceCartModificationException;
 import de.hybris.platform.core.model.product.ProductModel;
 import de.hybris.platform.product.ProductService;
 import de.hybris.platform.servicelayer.event.EventService;
+import de.hybris.platform.servicelayer.i18n.CommonI18NService;
+import de.hybris.platform.site.BaseSiteService;
+import de.hybris.platform.store.services.BaseStoreService;
 
 import java.util.Arrays;
 
@@ -90,13 +94,16 @@ public class AddToCartController extends AbstractController
 			{
 				final CartModificationData cartModification = cartFacade.addToCart(code, qty);
 
+				/* Mycode */
+
 
 				final ProductModel product = productService.getProductForCode(code);
 				System.out.println(product.getName() + " Product name in controller>>>>>>>>>");
 				try
 				{
 					System.out.println("publishing an my event>>>>>>>>>>>>>>");
-					eventService.publishEvent(new CronJobMailEvent(product));
+					//eventService.publishEvent(new CronJobMailEvent(product));(initializeEvent(new ForgottenPwdEvent(token), customerModel));
+					eventService.publishEvent(initializeEvent(new CronJobMailEvent(product)));
 				}
 				catch (final Exception e)
 				{
@@ -105,6 +112,7 @@ public class AddToCartController extends AbstractController
 				}
 
 
+				/* Mycode */
 
 
 				model.addAttribute("quantity", Long.valueOf(cartModification.getQuantityAdded()));
@@ -133,6 +141,56 @@ public class AddToCartController extends AbstractController
 		return ControllerConstants.Views.Fragments.Cart.AddToCartPopup;
 	}
 
+	/* MYCODE */
+	protected AbstractCommerceUserEvent initializeEvent(final AbstractCommerceUserEvent event)
+	{
+		event.setBaseStore(getBaseStoreService().getCurrentBaseStore());
+		event.setSite(getBaseSiteService().getCurrentBaseSite());
+
+		event.setLanguage(getCommonI18NService().getCurrentLanguage());
+		event.setCurrency(getCommonI18NService().getCurrentCurrency());
+
+		return event;
+	}
+
+	protected BaseStoreService getBaseStoreService()
+	{
+		return baseStoreService;
+	}
+
+	public void setBaseStoreService(final BaseStoreService service)
+	{
+		baseStoreService = service;
+	}
+
+	protected BaseSiteService getBaseSiteService()
+	{
+		return baseSiteService;
+	}
+
+	public void setBaseSiteService(final BaseSiteService siteService)
+	{
+		baseSiteService = siteService;
+	}
+
+	protected CommonI18NService getCommonI18NService()
+	{
+		return commonI18NService;
+	}
+
+	public void setCommonI18NService(final CommonI18NService commonI18NService)
+	{
+		this.commonI18NService = commonI18NService;
+	}
+
+	@Resource(name = "baseStoreService")
+	private BaseStoreService baseStoreService;
+	@Resource(name = "baseSiteService")
+	private BaseSiteService baseSiteService;
+	@Resource(name = "commonI18NService")
+	private CommonI18NService commonI18NService;
+
+	/* MYCODE */
 	protected String getViewWithBindingErrorMessages(final Model model, final BindingResult bindingErrors)
 	{
 		for (final ObjectError error : bindingErrors.getAllErrors())

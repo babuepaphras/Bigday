@@ -80,7 +80,9 @@ INSERT_UPDATE Product;code[unique=true];$supercategories;manufacturerName;manufa
 ;669789;576, brand_88;Kodak;C503;pieces;
 ;669797;576, brand_88;Kodak;P712;pieces;
 ;669799;576, brand_88;Kodak;V603;pieces;
-;676442;576, brand_5;Sony;DSC-W55B;pieces;4905524411805
+
+
+;676442;110, brand_5;Sony;DSC-W55B;pieces;4905524411805
 ;686951;576, brand_5;Sony;DSC-W55P;pieces;4905524411560
 ;695824;902, brand_18;Kingston;SDC/2GB;pieces;0740617113983
 ;726510;578, brand_10;Canon;1234B015AA;pieces;8714574967523

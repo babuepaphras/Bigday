@@ -108,7 +108,7 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 	
 		createItemType(
 			"CronJobMailProcess",
-			"StoreFrontProcess",
+			"StoreFrontCustomerProcess",
 			de.hybris.bigday.core.jalo.CronJobMailProcess.class,
 			null,
 			false,

@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at May 5, 2016 2:04:26 PM                      ---
+ * --- Generated at Jun 8, 2016 6:52:23 PM                      ---
  * ----------------------------------------------------------------
  *  
  * [y] hybris Platform
@@ -18,7 +18,7 @@
 package de.hybris.bigday.core.jalo;
 
 import de.hybris.bigday.core.constants.BigdayCoreConstants;
-import de.hybris.platform.commerceservices.jalo.process.StoreFrontProcess;
+import de.hybris.platform.commerceservices.jalo.process.StoreFrontCustomerProcess;
 import de.hybris.platform.jalo.Item.AttributeMode;
 import de.hybris.platform.jalo.SessionContext;
 import de.hybris.platform.jalo.product.Product;
@@ -27,17 +27,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Generated class for type {@link de.hybris.platform.commerceservices.jalo.process.StoreFrontProcess CronJobMailProcess}.
+ * Generated class for type {@link de.hybris.platform.commerceservices.jalo.process.StoreFrontCustomerProcess CronJobMailProcess}.
  */
 @SuppressWarnings({"deprecation","unused","cast","PMD"})
-public abstract class GeneratedCronJobMailProcess extends StoreFrontProcess
+public abstract class GeneratedCronJobMailProcess extends StoreFrontCustomerProcess
 {
 	/** Qualifier of the <code>CronJobMailProcess.product</code> attribute **/
 	public static final String PRODUCT = "product";
 	protected static final Map<String, AttributeMode> DEFAULT_INITIAL_ATTRIBUTES;
 	static
 	{
-		final Map<String, AttributeMode> tmp = new HashMap<String, AttributeMode>(StoreFrontProcess.DEFAULT_INITIAL_ATTRIBUTES);
+		final Map<String, AttributeMode> tmp = new HashMap<String, AttributeMode>(StoreFrontCustomerProcess.DEFAULT_INITIAL_ATTRIBUTES);
 		tmp.put(PRODUCT, AttributeMode.INITIAL);
 		DEFAULT_INITIAL_ATTRIBUTES = Collections.unmodifiableMap(tmp);
 	}

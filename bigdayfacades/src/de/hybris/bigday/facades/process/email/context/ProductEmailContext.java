@@ -20,7 +20,7 @@ import de.hybris.platform.servicelayer.dto.converter.Converter;
  */
 public class ProductEmailContext extends AbstractEmailContext<CronJobMailProcessModel>
 {
-	private Converter<ProductModel, ProductData> prodcutConverter;
+	private Converter<ProductModel, ProductData> productConverter;
 	private ProductData productData;
 	private String productName;
 	private String productNameFromData;
@@ -33,15 +33,15 @@ public class ProductEmailContext extends AbstractEmailContext<CronJobMailProcess
 	public void init(final CronJobMailProcessModel cronJobMailProcessModel, final EmailPageModel emailPageModel)
 	{
 		super.init(cronJobMailProcessModel, emailPageModel);
-		productData = getProdcutConverter().convert(cronJobMailProcessModel.getProduct());
+		productData = getProductConverter().convert(cronJobMailProcessModel.getProduct());
 		productName = "MY PRODUCT NAME from Productmodel: " + cronJobMailProcessModel.getProduct().getName();
 		productNameFromData = "MY PRODUCT NAME from ProductData: " + productData.getName();
 		System.out.println(productName + " %%%%%%% " + productNameFromData);
 	}
 
-	public Converter<ProductModel, ProductData> getProdcutConverter()
+	public Converter<ProductModel, ProductData> getProductConverter()
 	{
-		return prodcutConverter;
+		return productConverter;
 	}
 
 
@@ -49,9 +49,9 @@ public class ProductEmailContext extends AbstractEmailContext<CronJobMailProcess
 	 * @param prodcutConverter
 	 *           the prodcutConverter to set
 	 */
-	public void setProdcutConverter(final Converter<ProductModel, ProductData> prodcutConverter)
+	public void setProductConverter(final Converter<ProductModel, ProductData> productConverter)
 	{
-		this.prodcutConverter = prodcutConverter;
+		this.productConverter = productConverter;
 	}
 
 

@@ -193,7 +193,7 @@
 		</typegroup>
 		
 			<typegroup name="mail">
-			<itemtype code="CronJobMailProcess" extends="StoreFrontProcess"
+			<itemtype code="CronJobMailProcess" extends="StoreFrontCustomerProcess"
 				autocreate="true" generate="true">
 				<attributes>
 					<attribute qualifier="product" type="product">

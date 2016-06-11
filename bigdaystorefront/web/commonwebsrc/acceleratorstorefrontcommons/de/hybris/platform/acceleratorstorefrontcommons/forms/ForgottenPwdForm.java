@@ -14,9 +14,6 @@
 package de.hybris.platform.acceleratorstorefrontcommons.forms;
 
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-
-import org.hibernate.validator.constraints.Email;
 
 
 /**
@@ -30,9 +27,15 @@ public class ForgottenPwdForm
 	/**
 	 * @return the email
 	 */
+	/* changed email as mobile number for login */
 	@NotNull(message = "{forgottenPwd.email.invalid}")
-	@Size(min = 1, max = 255, message = "{forgottenPwd.email.invalid}")
-	@Email(message = "{forgottenPwd.email.invalid}")
+	/*
+	 * COMMENTED BY BABU
+	 * 
+	 * @Size(min = 1, max = 255, message = "{forgottenPwd.email.invalid}")
+	 *
+	 * @Email(message = "{forgottenPwd.email.invalid}")
+	 */
 	public String getEmail()
 	{
 		return email;

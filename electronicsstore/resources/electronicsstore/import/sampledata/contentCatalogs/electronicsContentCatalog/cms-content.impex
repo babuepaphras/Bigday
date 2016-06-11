@@ -415,7 +415,7 @@ INSERT_UPDATE BannerComponent;$contentCV[unique=true];uid[unique=true];name;&com
 #;;SonyCybershotBannerComponent;Sony Cybershot DSC-S930 Thumbnail Detail;SonyCybershotBannerComponent;/Open-Catalogue/Cameras/Digital-Cameras/Digital-Compacts/DSC-S930/p/1992695
 #;;KodakEasyshareBannerComponent;Kodak Easyshare V1253 Thumbnail Detail;KodakEasyshareBannerComponent;/Open-Catalogue/Cameras/Digital-Cameras/Digital-Compacts/EASYSHARE-V1253%2C-Black/p/1320808
 #;;SonyDSCBannerComponent;Sony DSC-H20 Thumbnail Detail;SonyDSCBannerComponent;/Open-Catalogue/Cameras/Digital-Cameras/Digital-Compacts/DSC-H20/p/1978440
--;;TripodComponent;tripod details;TripodComponent;/Open-Catalogue/Cameras/Camera-Accessories-%26-Supplies/Tripods/Flagship-tripod-with-remote-control-and-pan-handle/p/23355
+;;TripodComponent;tripod details;TripodComponent;/Open-Catalogue/Cameras/Camera-Accessories-%26-Supplies/Tripods/Flagship-tripod-with-remote-control-and-pan-handle/p/23355
 ;;DigitalCompactCamerasBannerComponent;Digital Compact Cameras Small Detail;DigitalCompactCamerasBannerComponent;/Open-Catalogue/Cameras/Digital-Cameras/Digital-Compacts/c/576
 ;;DigitalSLRCamerasBannerComponent;Digital SLR Cameras Small Detail;DigitalSLRCamerasBannerComponent;/Open-Catalogue/Cameras/Digital-Cameras/Digital-SLR/c/578
 ;;MemoryBannerComponent;Camera and Camcorder Memory Small Detail;MemoryBannerComponent;/Open-Catalogue/Data-storage/Flash-Memory/c/902

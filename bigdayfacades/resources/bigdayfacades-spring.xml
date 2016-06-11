@@ -134,7 +134,10 @@
 	<bean id="customerEmailContext" class="de.hybris.bigday.facades.process.email.context.CustomerEmailContext" parent="abstractEmailContext" scope="prototype" >
 		<property name="customerConverter" ref="customerConverter"/>
 	</bean>
-
+	
+	<bean id="productEmailContext" class="de.hybris.bigday.facades.process.email.context.ProductEmailContext" parent="abstractEmailContext" scope="prototype" >
+		<property name="productConverter" ref="productConverter"/>
+	</bean>
 	<bean id="forgottenPasswordEmailContext" class="de.hybris.bigday.facades.process.email.context.ForgottenPasswordEmailContext" parent="customerEmailContext" scope="prototype" >
 		<property name="customerConverter" ref="customerConverter"/>
 	</bean>
